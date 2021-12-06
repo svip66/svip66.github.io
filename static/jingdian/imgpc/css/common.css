@@ -972,14 +972,14 @@ input:-webkit-autofill {
 
 /*侧边浮动*/
 
-.celan-float {
+. {
 	position: fixed;
 	right: 0;
 	top: 220px;
 	z-index: 999999;
 }
 
-.celan-float ul li {
+. ul li {
 	width: 39px;
 	height: 39px;
 	border: 1px solid #dddddd;
@@ -987,37 +987,37 @@ input:-webkit-autofill {
 	margin-top: 2px;
 }
 
-.celan-float ul li:hover {
+. ul li:hover {
 	background: url(../images/icon-right-w.png) no-repeat #007cc3;
 	border-color: #007cc3;
 }
 
-.celan-float ul li a {
+. ul li a {
 	display: block;
 	text-indent: -999999px;
 	width: 100%;
 	height: 39px;
 }
 
-.celan-float ul li.shop a {
+. ul li.shop a {
 	text-indent: inherit;
 }
 
-.celan-float ul li.shop {
+. ul li.shop {
 	background-position: 5px -120px;
 }
 
-.celan-float ul li.shop a {
+. ul li.shop a {
 	position: relative;
 }
 
-.celan-float ul li.shop:hover span {
+. ul li.shop:hover span {
 	color: #056aa3;
 	border: 1px solid #056aa3;
 	background-color: #fff;
 }
 
-.celan-float ul li.shop a span {
+. ul li.shop a span {
 	position: absolute;
 	top: -4px;
 	right: 0;
@@ -1033,16 +1033,16 @@ input:-webkit-autofill {
 	text-align: center;
 }
 
-.celan-float ul li.coll {
+. ul li.coll {
 	background-position: 6px -36px;
 }
 
-.celan-float ul li.ecode {
+. ul li.ecode {
 	background-position: 6px -78px;
 	position: relative;
 }
 
-.celan-float ul li.ecode .ecode-box {
+. ul li.ecode .ecode-box {
 	position: absolute;
 	right: 40px;
 	top: -1px;
@@ -1052,26 +1052,26 @@ input:-webkit-autofill {
 	display: none;
 }
 
-.celan-float ul li.ecode .ecode-box img {
+. ul li.ecode .ecode-box img {
 	width: 80px;
 	height: 80px;
 	padding: 10px;
 }
 
-.celan-float ul li.ecode:hover .ecode-box {
+. ul li.ecode:hover .ecode-box {
 	display: block;
 }
 
-.celan-float ul li.gossi {
+. ul li.gossi {
 	background-position: 6px -120px;
 }
 
-.celan-float ul li.telnum {
+. ul li.telnum {
 	background-position: 6px -163px;
 	position: relative;
 }
 
-.celan-float ul li.telnum .tel-box {
+. ul li.telnum .tel-box {
 	position: absolute;
 	right: 40px;
 	top: -1px;
@@ -1083,19 +1083,19 @@ input:-webkit-autofill {
 	display: none;
 }
 
-.celan-float ul li.telnum .tel-box span {
+. ul li.telnum .tel-box span {
 	color: #fff;
 }
 
-.celan-float ul li.telnum:hover .tel-box {
+. ul li.telnum:hover .tel-box {
 	display: block;
 }
 
-.celan-float ul li.totop {
+. ul li.totop {
 	background-position: 6px -203px;
 }
 
-.celan-float ul li .radius {
+. ul li .radius {
 	-webkit-border-top-left-radius: 5px;
 	border-top-left-radius: 5px;
 	-webkit-border-bottom-left-radius: 5px;
