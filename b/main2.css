@@ -44,7 +44,7 @@
 	background-color: #f0f0f0;
 }
 .list-block .item-link .item-inner {
-	background-image: url(../img/icon-arrow-right.png);
+	/*background-image: url(../img/icon-arrow-right.png);*/
 	background-size: 0.173333rem 0.306666rem;
 }
 .list-block .item-link.active-state,
@@ -352,7 +352,7 @@ i.icon-imToken {
 	height: 5.426666rem;
 	margin: 0 auto;
 	padding: 0.4rem;
-	background-image: url(../img/qrcode-bg.png);
+	/*background-image: url(../img/qrcode-bg.png);*/
 	background-size: cover;
 }
 .list-block.qrcode .qrcode-link {
