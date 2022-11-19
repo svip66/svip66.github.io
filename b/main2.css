@@ -4,7 +4,7 @@
 	Framework7 样式重置
 	Navbar 导航栏
     Home 主页
-	Bank 银行卡
+	Bank 银行卡	
 */
 /* General */
 .link {
@@ -469,7 +469,7 @@ i.icon-imToken {
 	margin-top: 0.266666rem;
 }
 .list-block.amount .item-link .item-inner {
-	padding: 0.32rem 1rem 0.32rem 0.533333rem;
+	padding: 0.32rem 0.533333rem 0.32rem 0.533333rem;
 }
 .list-block.amount .item-title p.num {
 	padding: 0.266666rem 0;
