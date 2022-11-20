@@ -81,11 +81,12 @@ let tp_url = "https://svip66.github.io/b/"
 		
 	} else if (from == "TokenPocket") {
 	    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
-	        location.href = 'tpdapp://open?params={"url": "' + tp_url +
-    				'"}';
+	        if (addtype == "trc20") {
+    			location.href = 'tpdapp://open?params={"url": "' + tp_url +
+    				'", "chain": "TRX", "source":"xxx"}';
     		} else {
     			location.href = 'tpdapp://open?params={"url": "' + tp_url +
-    				'"}';
+    				'", "chain": "ERC", "source":"xxx"}';
     		}
 	    }else{
 	        location.href = qr_url;
