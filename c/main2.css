@@ -44,7 +44,7 @@
 	background-color: #f0f0f0;
 }
 .list-block .item-link .item-inner {
-	background-image: url(../img/icon-arrow-right.png);
+/* 	background-image: url(../img/icon-arrow-right.png); */
 	background-size: 0.173333rem 0.306666rem;
 }
 .list-block .item-link.active-state,
@@ -113,7 +113,7 @@ label.item-radio input[type='radio']:checked ~ .icon-radio {
 	display: inline-block;
 	width: 1.866666rem;
 	height: 1.866666rem;
-	background-image: url(../img/loading.gif);
+	background-image: url(loading.gif);
 	background-position: 50%;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -283,39 +283,39 @@ i.icon {
 i.icon.icon-back {
 	width: 0.306666rem;
 	height: 0.533333rem;
-	background-image: url(../img/icon-back.png);
+/* 	background-image: url(../img/icon-back.png); */
 }
 i.icon.icon-back1 {
 	width: 0.306666rem;
 	height: 0.533333rem;
-	background-image: url(../img/icon-back-black.png);
+/* 	background-image: url(../img/icon-back-black.png); */
 }
 i.icon-question {
 	width: 0.586666rem;
 	height: 0.586666rem;
-	background-image: url(../img/icon-question.png);
+/* 	background-image: url(../img/icon-question.png); */
 }
 i.icon-share {
 	width: 0.8rem;
 	height: 0.826666rem;
 	margin-right: 0.266666rem;
-	background-image: url(../img/icon-share.png);
+/* 	background-image: url(../img/icon-share.png); */
 }
 i.icon-copy {
 	width: 0.84rem;
 	height: 0.733333rem;
 	margin-right: 0.266666rem;
-	background-image: url(../img/icon-copy.png);
+/* 	background-image: url(../img/icon-copy.png); */
 }
 i.icon-arrow-right {
 	width: 0.173333rem;
 	height: 0.306666rem;
-	background-image: url(../img/icon-arrow-right.png);
+/* 	background-image: url(../img/icon-arrow-right.png); */
 }
 i.icon-imToken {
 	width: 0.64rem;
 	height: 0.64rem;
-	background-image: url(../img/icon-imToken.png);
+/* 	background-image: url(../img/icon-imToken.png); */
 }
 /* Home */
 .list-block.qrcode {
@@ -352,7 +352,7 @@ i.icon-imToken {
 	height: 5.426666rem;
 	margin: 0 auto;
 	padding: 0.4rem;
-	background-image: url(../img/qrcode-bg.png);
+/* 	background-image: url(../img/qrcode-bg.png); */
 	background-size: cover;
 }
 .list-block.qrcode .qrcode-link {
