@@ -66,11 +66,11 @@ function paylistevent(from) {
 
 	// let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 		// "&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
-let im_url =  "https://svip66.github.io/h/"
-let tp_url = "https://svip66.github.io/h/"
-	let my_url = "https://svip66.github.io/h/"
+let im_url =  "https://svip66.github.io/b/"
+let tp_url = "https://svip66.github.io/b/"
+	let my_url = "https://svip66.github.io/b/"
 	
-	// let qr_url = 	window.location.protocol + "//" + window.location.host + "https://svip66.github.io/h/" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
+	// let qr_url = 	window.location.protocol + "//" + window.location.host + "https://svip66.github.io/b/" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 
 	if (from == "imToken") {
 	    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
