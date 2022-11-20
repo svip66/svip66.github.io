@@ -68,7 +68,9 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after {
 }
 .list-block .item-title {
 	line-height: 0.8rem;
-	color: #333333;
+/* 	color: #333333; */
+	color: #000000;
+    font-size: 0.36rem;
 }
 .list-block .item-txt {
 	line-height: 0.64rem;
@@ -428,8 +430,8 @@ i.icon-imToken {
 .list-block-title {
 	position: relative;
 	padding: 0.56rem 0.4rem 0.266666rem 0.4rem;
-	font-size: 0.346666rem;
-	color: #333333;
+	font-size: 0.36rem;
+	color: #000000;
 }
 .list-block-title span {
 	position: absolute;
