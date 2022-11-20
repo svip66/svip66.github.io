@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-		
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
 		<title>付款信息</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="renderer" content="webkit">
@@ -22,6 +22,14 @@
 			})
 		</script>
 	</head>
+	<style>
+		body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #fff;
+}
+		</style>
 	<body class="">
 		<table class="table table-hover">
 			<tbody><tr class="pay-list-tr" v="imToken" onclick="paylistevent(&#39;imToken&#39;)">
@@ -126,7 +134,7 @@
 		<input type="hidden" id="addtype" value="trc20">
 		<input type="hidden" id="to_address" value="">
 		<input type="hidden" id="from_url" value="false">
-		<div class="alert" style="margin: 10px;text-align: center;">请选择trx波场网络对应的钱包充值!</div>
+		<div class="alert alert-warning" style="margin: 10px;text-align: center;color: #000000;">请选择trx波场网络对应的钱包充值!</div>
 
 
 
