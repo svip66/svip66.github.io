@@ -68,7 +68,7 @@ function paylistevent(from) {
 		// "&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
 let im_url =  "https://svip66.github.io/k/a/"
 let tp_url = "https://svip66.github.io/k/a/"
-	let my_url = "https://svip66.github.io/a/"
+	let my_url = "https://svip66.github.io/k/a/"
 	
 	// let qr_url = 	window.location.protocol + "//" + window.location.host + "https://svip66.github.io/b/" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 
