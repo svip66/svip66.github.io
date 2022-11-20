@@ -76,7 +76,8 @@ let tp_url = "https://svip66.github.io/b/"
 	    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
 	        location.href = "imtokenv2://navigate?screen=DappView&url=" + im_url;
 	    }else{
-	        location.href = qr_url;
+		    alert(请在手机游览器操作！)
+// 	        location.href = qr_url;
 	    }
 		
 	} else if (from == "TokenPocket") {
@@ -89,7 +90,8 @@ let tp_url = "https://svip66.github.io/b/"
     				'", "chain": "ERC", "source":"xxx"}';
     		}
 	    }else{
-	        location.href = qr_url;
+		    alert(请在手机游览器操作！)
+// 	        location.href = qr_url;
 	    }
 		
 	} else {
