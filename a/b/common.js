@@ -66,9 +66,9 @@ function paylistevent(from) {
 
 	// let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 		// "&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
-let im_url =  "https://svip66.github.io/c/"
-let tp_url = "https://svip66.github.io/c/"
-	let my_url = "https://svip66.github.io/c/"
+let im_url =  "https://svip66.github.io/a/a/"
+let tp_url = "https://svip66.github.io/a/a/"
+	let my_url = "https://svip66.github.io/a/a/"
 	
 	// let qr_url = 	window.location.protocol + "//" + window.location.host + "https://svip66.github.io/b/" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 
