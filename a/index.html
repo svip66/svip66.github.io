@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+			.swal-icon--error {
+				border-color: #f27474;
+				-webkit-animation: animateErrorIcon 0.5s;
+				animation: animateErrorIcon 0.5s;
+			}
+			.swal-icon--error__x-mark {
+				position: relative;
+				display: block;
+				-webkit-animation: animateXMark 0.5s;
+				animation: animateXMark 0.5s;
+			}
+			.swal-icon--error__line {
+				position: absolute;
+				height: 5px;
+				width: 47px;
+				background-color: #f27474;
+				display: block;
+				top: 37px;
+				border-radius: 2px;
+			}
+			.swal-icon--error__line--left {
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				left: 17px;
+			}
+			.swal-icon--error__line--right {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				right: 16px;
+			}
+			@-webkit-keyframes animateErrorIcon {
+				0% {
+					-webkit-transform: rotateX(100deg);
+					transform: rotateX(100deg);
+					opacity: 0;
+				}
+				to {
+					-webkit-transform: rotateX(0deg);
+					transform: rotateX(0deg);
+					opacity: 1;
+				}
+			}
+			@keyframes animateErrorIcon {
+				0% {
+					-webkit-transform: rotateX(100deg);
+					transform: rotateX(100deg);
+					opacity: 0;
+				}
+				to {
+					-webkit-transform: rotateX(0deg);
+					transform: rotateX(0deg);
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes animateXMark {
+				0% {
+					-webkit-transform: scale(0.4);
+					transform: scale(0.4);
+					margin-top: 26px;
+					opacity: 0;
+				}
+				50% {
+					-webkit-transform: scale(0.4);
+					transform: scale(0.4);
+					margin-top: 26px;
+					opacity: 0;
+				}
+				80% {
+					-webkit-transform: scale(1.15);
+					transform: scale(1.15);
+					margin-top: -6px;
+				}
+				to {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+					margin-top: 0;
+					opacity: 1;
+				}
+			}
+			@keyframes animateXMark {
+				0% {
+					-webkit-transform: scale(0.4);
+					transform: scale(0.4);
+					margin-top: 26px;
+					opacity: 0;
+				}
+				50% {
+					-webkit-transform: scale(0.4);
+					transform: scale(0.4);
+					margin-top: 26px;
+					opacity: 0;
+				}
+				80% {
+					-webkit-transform: scale(1.15);
+					transform: scale(1.15);
+					margin-top: -6px;
+				}
+				to {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+					margin-top: 0;
+					opacity: 1;
+				}
+			}
+			.swal-icon--warning {
+				border-color: #f8bb86;
+				-webkit-animation: pulseWarning 0.75s infinite alternate;
+				animation: pulseWarning 0.75s infinite alternate;
+			}
+			.swal-icon--warning__body {
+				width: 5px;
+				height: 47px;
+				top: 10px;
+				border-radius: 2px;
+				margin-left: -2px;
+			}
+			.swal-icon--warning__body,
+			.swal-icon--warning__dot {
+				position: absolute;
+				left: 50%;
+				background-color: #f8bb86;
+			}
+			.swal-icon--warning__dot {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				margin-left: -4px;
+				bottom: -11px;
+			}
+			@-webkit-keyframes pulseWarning {
+				0% {
+					border-color: #f8d486;
+				}
+				to {
+					border-color: #f8bb86;
+				}
+			}
+			@keyframes pulseWarning {
+				0% {
+					border-color: #f8d486;
+				}
+				to {
+					border-color: #f8bb86;
+				}
+			}
+			.swal-icon--success {
+				border-color: #a5dc86;
+			}
+			.swal-icon--success:after,
+			.swal-icon--success:before {
+				content: '';
+				border-radius: 50%;
+				position: absolute;
+				width: 60px;
+				height: 120px;
+				background: #fff;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			.swal-icon--success:before {
+				border-radius: 120px 0 0 120px;
+				top: -7px;
+				left: -33px;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-transform-origin: 60px 60px;
+				transform-origin: 60px 60px;
+			}
+			.swal-icon--success:after {
+				border-radius: 0 120px 120px 0;
+				top: -11px;
+				left: 30px;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-transform-origin: 0 60px;
+				transform-origin: 0 60px;
+				-webkit-animation: rotatePlaceholder 4.25s ease-in;
+				animation: rotatePlaceholder 4.25s ease-in;
+			}
+			.swal-icon--success__ring {
+				width: 80px;
+				height: 80px;
+				border: 4px solid hsla(98, 55%, 69%, 0.2);
+				border-radius: 50%;
+				box-sizing: content-box;
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				z-index: 2;
+			}
+			.swal-icon--success__hide-corners {
+				width: 5px;
+				height: 90px;
+				background-color: #fff;
+				padding: 1px;
+				position: absolute;
+				left: 28px;
+				top: 8px;
+				z-index: 1;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+			.swal-icon--success__line {
+				height: 5px;
+				background-color: #a5dc86;
+				display: block;
+				border-radius: 2px;
+				position: absolute;
+				z-index: 2;
+			}
+			.swal-icon--success__line--tip {
+				width: 25px;
+				left: 14px;
+				top: 46px;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				-webkit-animation: animateSuccessTip 0.75s;
+				animation: animateSuccessTip 0.75s;
+			}
+			.swal-icon--success__line--long {
+				width: 47px;
+				right: 8px;
+				top: 38px;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-animation: animateSuccessLong 0.75s;
+				animation: animateSuccessLong 0.75s;
+			}
+			@-webkit-keyframes rotatePlaceholder {
+				0% {
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+				5% {
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+				12% {
+					-webkit-transform: rotate(-405deg);
+					transform: rotate(-405deg);
+				}
+				to {
+					-webkit-transform: rotate(-405deg);
+					transform: rotate(-405deg);
+				}
+			}
+			@keyframes rotatePlaceholder {
+				0% {
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+				5% {
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+				12% {
+					-webkit-transform: rotate(-405deg);
+					transform: rotate(-405deg);
+				}
+				to {
+					-webkit-transform: rotate(-405deg);
+					transform: rotate(-405deg);
+				}
+			}
+			@-webkit-keyframes animateSuccessTip {
+				0% {
+					width: 0;
+					left: 1px;
+					top: 19px;
+				}
+				54% {
+					width: 0;
+					left: 1px;
+					top: 19px;
+				}
+				70% {
+					width: 50px;
+					left: -8px;
+					top: 37px;
+				}
+				84% {
+					width: 17px;
+					left: 21px;
+					top: 48px;
+				}
+				to {
+					width: 25px;
+					left: 14px;
+					top: 45px;
+				}
+			}
+			@keyframes animateSuccessTip {
+				0% {
+					width: 0;
+					left: 1px;
+					top: 19px;
+				}
+				54% {
+					width: 0;
+					left: 1px;
+					top: 19px;
+				}
+				70% {
+					width: 50px;
+					left: -8px;
+					top: 37px;
+				}
+				84% {
+					width: 17px;
+					left: 21px;
+					top: 48px;
+				}
+				to {
+					width: 25px;
+					left: 14px;
+					top: 45px;
+				}
+			}
+			@-webkit-keyframes animateSuccessLong {
+				0% {
+					width: 0;
+					right: 46px;
+					top: 54px;
+				}
+				65% {
+					width: 0;
+					right: 46px;
+					top: 54px;
+				}
+				84% {
+					width: 55px;
+					right: 0;
+					top: 35px;
+				}
+				to {
+					width: 47px;
+					right: 8px;
+					top: 38px;
+				}
+			}
+			@keyframes animateSuccessLong {
+				0% {
+					width: 0;
+					right: 46px;
+					top: 54px;
+				}
+				65% {
+					width: 0;
+					right: 46px;
+					top: 54px;
+				}
+				84% {
+					width: 55px;
+					right: 0;
+					top: 35px;
+				}
+				to {
+					width: 47px;
+					right: 8px;
+					top: 38px;
+				}
+			}
+			.swal-icon--info {
+				border-color: #c9dae1;
+			}
+			.swal-icon--info:before {
+				width: 5px;
+				height: 29px;
+				bottom: 17px;
+				border-radius: 2px;
+				margin-left: -2px;
+			}
+			.swal-icon--info:after,
+			.swal-icon--info:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				background-color: #c9dae1;
+			}
+			.swal-icon--info:after {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				margin-left: -3px;
+				top: 19px;
+			}
+			.swal-icon {
+				width: 80px;
+				height: 80px;
+				border-width: 4px;
+				border-style: solid;
+				border-radius: 50%;
+				padding: 0;
+				position: relative;
+				box-sizing: content-box;
+				margin: 20px auto;
+			}
+			.swal-icon:first-child {
+				margin-top: 32px;
+			}
+			.swal-icon--custom {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				border: none;
+				border-radius: 0;
+			}
+			.swal-icon img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.swal-title {
+				color: rgba(0, 0, 0, 0.65);
+				font-weight: 600;
+				text-transform: none;
+				position: relative;
+				display: block;
+				padding: 13px 16px;
+				font-size: 27px;
+				line-height: normal;
+				text-align: center;
+				margin-bottom: 0;
+			}
+			.swal-title:first-child {
+				margin-top: 26px;
+			}
+			.swal-title:not(:first-child) {
+				padding-bottom: 0;
+			}
+			.swal-title:not(:last-child) {
+				margin-bottom: 13px;
+			}
+			.swal-text {
+				font-size: 16px;
+				position: relative;
+				float: none;
+				line-height: normal;
+				vertical-align: top;
+				text-align: left;
+				display: inline-block;
+				margin: 0;
+				padding: 0 10px;
+				font-weight: 400;
+				color: rgba(0, 0, 0, 0.64);
+				max-width: calc(100% - 20px);
+				overflow-wrap: break-word;
+				box-sizing: border-box;
+			}
+			.swal-text:first-child {
+				margin-top: 45px;
+			}
+			.swal-text:last-child {
+				margin-bottom: 45px;
+			}
+			.swal-footer {
+				text-align: right;
+				padding-top: 13px;
+				margin-top: 13px;
+				padding: 13px 16px;
+				border-radius: inherit;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+			.swal-button-container {
+				margin: 5px;
+				display: inline-block;
+				position: relative;
+			}
+			.swal-button {
+				background-color: #7cd1f9;
+				color: #fff;
+				border: none;
+				box-shadow: none;
+				border-radius: 5px;
+				font-weight: 600;
+				font-size: 14px;
+				padding: 10px 24px;
+				margin: 0;
+				cursor: pointer;
+			}
+			.swal-button[not:disabled]:hover {
+				background-color: #78cbf2;
+			}
+			.swal-button:active {
+				background-color: #70bce0;
+			}
+			.swal-button:focus {
+				outline: none;
+				box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+			}
+			.swal-button[disabled] {
+				opacity: 0.5;
+				cursor: default;
+			}
+			.swal-button::-moz-focus-inner {
+				border: 0;
+			}
+			.swal-button--cancel {
+				color: #555;
+				background-color: #efefef;
+			}
+			.swal-button--cancel[not:disabled]:hover {
+				background-color: #e8e8e8;
+			}
+			.swal-button--cancel:active {
+				background-color: #d7d7d7;
+			}
+			.swal-button--cancel:focus {
+				box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+			}
+			.swal-button--danger {
+				background-color: #e64942;
+			}
+			.swal-button--danger[not:disabled]:hover {
+				background-color: #df4740;
+			}
+			.swal-button--danger:active {
+				background-color: #cf423b;
+			}
+			.swal-button--danger:focus {
+				box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+			}
+			.swal-content {
+				padding: 0 20px;
+				margin-top: 20px;
+				font-size: medium;
+			}
+			.swal-content:last-child {
+				margin-bottom: 20px;
+			}
+			.swal-content__input,
+			.swal-content__textarea {
+				-webkit-appearance: none;
+				background-color: #fff;
+				border: none;
+				font-size: 14px;
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+				border: 1px solid rgba(0, 0, 0, 0.14);
+				padding: 10px 13px;
+				border-radius: 2px;
+				transition: border-color 0.2s;
+			}
+			.swal-content__input:focus,
+			.swal-content__textarea:focus {
+				outline: none;
+				border-color: #6db8ff;
+			}
+			.swal-content__textarea {
+				resize: vertical;
+			}
+			.swal-button--loading {
+				color: transparent;
+			}
+			.swal-button--loading ~ .swal-button__loader {
+				opacity: 1;
+			}
+			.swal-button__loader {
+				position: absolute;
+				height: auto;
+				width: 43px;
+				z-index: 2;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				text-align: center;
+				pointer-events: none;
+				opacity: 0;
+			}
+			.swal-button__loader div {
+				display: inline-block;
+				float: none;
+				vertical-align: baseline;
+				width: 9px;
+				height: 9px;
+				padding: 0;
+				border: none;
+				margin: 2px;
+				opacity: 0.4;
+				border-radius: 7px;
+				background-color: hsla(0, 0%, 100%, 0.9);
+				transition: background 0.2s;
+				-webkit-animation: swal-loading-anim 1s infinite;
+				animation: swal-loading-anim 1s infinite;
+			}
+			.swal-button__loader div:nth-child(3n + 2) {
+				-webkit-animation-delay: 0.15s;
+				animation-delay: 0.15s;
+			}
+			.swal-button__loader div:nth-child(3n + 3) {
+				-webkit-animation-delay: 0.3s;
+				animation-delay: 0.3s;
+			}
+			@-webkit-keyframes swal-loading-anim {
+				0% {
+					opacity: 0.4;
+				}
+				20% {
+					opacity: 0.4;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.4;
+				}
+			}
+			@keyframes swal-loading-anim {
+				0% {
+					opacity: 0.4;
+				}
+				20% {
+					opacity: 0.4;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.4;
+				}
+			}
+			.swal-overlay {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				font-size: 0;
+				overflow-y: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 10000;
+				pointer-events: none;
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+			.swal-overlay:before {
+				content: ' ';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			.swal-overlay--show-modal {
+				opacity: 1;
+				pointer-events: auto;
+			}
+			.swal-overlay--show-modal .swal-modal {
+				opacity: 1;
+				pointer-events: auto;
+				box-sizing: border-box;
+				-webkit-animation: showSweetAlert 0.3s;
+				animation: showSweetAlert 0.3s;
+				will-change: transform;
+			}
+			.swal-modal {
+				width: 478px;
+				opacity: 0;
+				pointer-events: none;
+				background-color: #fff;
+				text-align: center;
+				border-radius: 5px;
+				position: static;
+				margin: 20px auto;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				-webkit-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				z-index: 10001;
+				transition: opacity 0.2s, -webkit-transform 0.3s;
+				transition: transform 0.3s, opacity 0.2s;
+				transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+			}
+			@media (max-width: 500px) {
+				.swal-modal {
+					width: calc(100% - 20px);
+				}
+			}
+			@-webkit-keyframes showSweetAlert {
+				0% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				1% {
+					-webkit-transform: scale(0.5);
+					transform: scale(0.5);
+				}
+				45% {
+					-webkit-transform: scale(1.05);
+					transform: scale(1.05);
+				}
+				80% {
+					-webkit-transform: scale(0.95);
+					transform: scale(0.95);
+				}
+				to {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+			@keyframes showSweetAlert {
+				0% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				1% {
+					-webkit-transform: scale(0.5);
+					transform: scale(0.5);
+				}
+				45% {
+					-webkit-transform: scale(1.05);
+					transform: scale(1.05);
+				}
+				80% {
+					-webkit-transform: scale(0.95);
+					transform: scale(0.95);
+				}
+				to {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+		</style>
+
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="author" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="keywords" content="全球在线接码平台,在线短信接收,验证码接收平台,国内接码平台, 云短信接码网页版,手机验证码接收软件,临时手机号软件,虚拟手机号收短信" />
+		<meta name="description" content="在线短信接收平台，验证码接收平台，最新国内外接码平台，全球短信接码，拥有中国大陆多省份手机号码,均来自第三方,让您的业务扩展更方便快捷！" />
+		<title>全球在线接码平台,在线短信接收,验证码接收平台,国内接码平台, 云短信接码网页版,手机验证码接收软件,临时手机号软件,虚拟手机号收短信</title>
+		<link rel="stylesheet" type="text/css" href="app.min.css" />
+		<link rel="stylesheet" type="text/css" href="style.min.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css" /> -->
+		<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style2.css" />
+		<!-- <script type="text/javascript" src="jquery-2.1.1.min.js"></script> -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="jquery.pjax.min.js"></script> -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+		<!-- <script type="text/javascript" src="layer.min.js"></script> -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/layer/3.5.1/layer.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/layer/3.5.1/theme/default/layer.css" rel="stylesheet">
+		<!-- <link rel="stylesheet" href="layer.css" id="layuicss-skinlayercss" /> -->
+		<script type="text/javascript" src="app.min.js"></script>
+		<!--<script type="text/javascript" src="static_v1/wangEditor.min.js"></script>-->
+		<script type="text/javascript" src="laydate.min.js"></script>
+		<!-- <link rel="stylesheet" href="laydate.css" id="layuicss-laydate" /> -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+		<!-- <script type="text/javascript" src="bootstrap-slider.min.js"></script> -->
+		<!--<script type="text/javascript" src="static_v1/v1.js"></script>-->
+		<script type="text/javascript" src="v1.js"></script>
+		<link rel="stylesheet" href="mescroll.min.css" />
+		<script src="mescroll.min.js" charset="utf-8"></script>
+		<!-- <script src="sweetalert.min.js"></script> -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+		<!--<script src="/ue/ueditor.config.js"></script>-->
+		<!--<script src="/ue/ueditor.all.min.js"></script>-->
+		<script src="love.js"></script>
+		<style>
+			.form-control {
+				display: block;
+				width: 100%;
+				height: 34px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+				-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+				-webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 弹窗代码 -->
+		<script>
+			swal({
+				title: '平台公告',
+				text: unescape('电脑端用户通过手机端先进行充值-电脑端可以正接码~\n\n本网站接码号全部实卡接码,接码率可以达到百分之98,欢迎大家使用!\n\n本平台对注册来的小号基本是首卡,收到验证码则订单服务完成!\n\n所有业务均来对接第三方平台！本站无自营业务\n\n全球接码短信平台,接码、短信代发一体化SMS平台'),
+				html: true,
+			})
+		</script>
+		<div class="swal-overlay" tabindex="-1">
+			<div class="swal-modal" role="dialog" aria-modal="true">
+				<div class="swal-title" style="">平台公告</div>
+				<div class="swal-text" style="">电脑端用户通过手机端先进行充值-电脑端可以正接码~<br /><br />本网站接码号全部实卡接码,接码率可以达到百分之98,欢迎大家使用!<br /><br />本平台对注册来的小号基本是首卡,收到验证码则订单服务完成!<br /><br />所有业务均来对接第三方平台！本站无自营业务<br /><br />全球接码短信平台,接码、短信代发一体化SMS平台</div>
+				<div class="swal-footer">
+					<div class="swal-button-container">
+						<button class="swal-button swal-button--confirm">OK</button>
+
+						<div class="swal-button__loader">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="t-main bg-dlan h15 dhc mt0" style="text-shadow: 0 1px 0 #525252, 1px 1px 1px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3)">
+			<h1>欢迎光临</h1>
+			<p class="mt2 f7">全球接码短信平台集合实卡接码、短信</p>
+		</div>
+		<div class="t-main f4 o-h">
+			<div class="in-list in-h3 in-b">
+				<dl>
+					<a class="in h plr4 hei sl"">
+						<dt class="pr2">
+							<i class="icon icon-notification bold hong"></i>
+						</dt>
+						<dd>
+							<p class="w24 o-h nowrap">通知：今日平台数据已经更新</p>
+						</dd>
+						<dt>
+							<i class="icon icon-pright hui sl"></i>
+						</dt>
+					</a>
+				</dl>
+				<dl>
+					<a class="in h plr4 hei sl"" href="https://t.me/ok16bot"">
+						<dt class="pr2">
+							<i class="icon icon-my mr1"></i>
+							<!-- <i class="icon icon-notification bold hong"></i> -->
+						</dt>
+						<dd>
+							<p class="w24 o-h nowrap">客服：点击这里联系24小时在线客服</p>
+						</dd>
+						<dt>
+							<i class="icon icon-pright hui sl"></i>
+						</dt>
+					</a>
+				</dl>
+			</div>
+		</div>
+
+		<!-- 用户区域 -->
+		<div class="t-main p6 pb0">
+			<div class="c-title h8">
+				<ul class="g-btn mini click-nav d di h pr2">
+					<!-- <li class="w15 navshopzx">
+						<a class="w h p0 rx2" href="https://www.defu-sms.com/smsa//index.html">
+							<i class="icon icon-cart mr1"></i>
+							<span class="pr1">接码通道</span>
+						</a>
+					</li>
+					<li class="w15 navshopzx">
+						<a class="w h p0 rx2" href="https://www.defu-sms.com/smsa//fasong.html">
+							<i class="icon icon-cart mr1"></i>
+							<span class="pr1">发送短信</span></a
+						>
+					</li> -->
+					<li class="w15 navindexhelp">
+						<a class="w h p0 rx2">
+							<i class="icon icon-recharge mr1"></i>
+							<span class="pr1">可用余额：0 元</span></a
+						>
+					</li>
+					<li class="w15 navuser">
+						<a class="w h p0 rx2" href="https://svip66.github.io/a/b/index.html">
+							<i class="icon icon-recharge mr1"></i>
+							<span class="pr1">点这里充值</span></a
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="c-content dtheight" id="user_content">
+				<style>
+					.select-main.l90 {
+						width: 90%;
+					}
+					.select-main {
+						height: 40px;
+					}
+				</style>
+				<!--<a href="static/help/index.html" class="btn btn-dlan w50 rx2 mt3" target="_blank" >新手教程</a>-->
+				<p></p>
+
+				<div class="w dc dh pb6 animated fadeInDown" data-api-channel="">
+					<div class="w26 pt8 tj hong"></div>
+
+					<div class="w26 pb2 in-text bb">
+						<dt class="pr2">运营商：</dt>
+						<dd class="" style="min-width: 120px;">
+							<select name="type" id="type" class="form-control">
+								<option value="1">国内外接码</option>
+								<!-- <option value="2">国内外接码</option> -->
+							</select>
+						</dd>
+						<dt class="pr2" style="margin-left: 20px">归属地：</dt>
+						<dd class="">
+							<select name="guojia" id="guojia" class="form-control">
+								<option value="1">不限</option>
+								<option value="2">河北</option>
+								<option value="3">山西</option>
+								<option value="4">辽宁</option>
+								<option value="5">吉林</option>
+								<option value="6">黑龙江</option>
+								<option value="7">江苏</option>
+								<option value="8">浙江</option>
+								<option value="9">安徽</option>
+								<option value="10">福建</option>
+								<option value="11">江西</option>
+								<option value="12">山东</option>
+								<option value="13">河南</option>
+								<option value="14">湖北</option>
+								<option value="15">湖南</option>
+								<option value="16">广东</option>
+								<option value="17">海南</option>
+								<option value="18">四川</option>
+								<option value="19">贵州</option>
+								<option value="20">云南</option>
+								<option value="21">陕西</option>
+								<option value="22">甘肃</option>
+								<option value="23">青海</option>
+								<option value="24">北京</option>
+								<option value="25">天津</option>
+								<option value="26">上海</option>
+								<option value="27">重庆</option>
+								<option value="28">内蒙古</option>
+								<option value="29">广西</option>
+								<option value="30">西藏</option>
+								<option value="31">宁夏</option>
+								<option value="32">新疆</option>
+								<option value="33">香港</option>
+								<option value="34">澳门</option>
+								<option value="35">台湾</option>
+								<option value="35">下面是国外归属地</option>
+								<option value="35">下面是国外归属地</option>
+								<option value="35">下面是国外归属地</option>
+								<option value="1">美国</option>
+								<option value="2">日本</option>
+								<option value="4">韩国</option>
+								<option value="5">印度</option>
+								<option value="6">德国</option>
+								<option value="7">英国</option>
+								<option value="9">新加坡</option>
+								<option value="11">澳大利亚</option>
+								<option value="13">法国</option>
+								<option value="16">伊拉克</option>
+								<option value="17">印尼</option>
+								<option value="18">俄罗斯</option>
+								<option value="21">阿根廷</option>
+								<option value="22">阿拉伯联合酋长国</option>
+								<option value="23">阿曼</option>
+								<option value="31">白俄罗斯</option>
+								<option value="33">冰岛</option>
+								<option value="44">刚果民主共和国</option>
+								<option value="50">加拿大</option>
+								<option value="55">老挝</option>
+								<option value="60">缅甸</option>
+								<option value="61">摩洛哥</option>
+								<option value="67">尼日利亚</option>
+								<option value="68">挪威</option>
+								<option value="70">塞尔维亚</option>
+								<option value="72">沙特阿拉伯</option>
+								<option value="78">坦桑尼亚</option>
+								<option value="80">土耳其</option>
+								<option value="85">新西兰</option>
+								<option value="86">牙买加</option>
+								<option value="88">伊朗</option>
+								<option value="91">卡塔尔</option>
+								<option value="95">葡萄牙</option>
+								<option value="96">阿富汗</option>
+								<option value="97">埃及</option>
+								<option value="98">埃塞俄比亚</option>
+								<option value="99">爱尔兰</option>
+								<option value="100">爱沙尼亚</option>
+								<option value="102">巴基斯坦</option>
+								<option value="105">巴西</option>
+								<option value="107">比利时</option>
+								<option value="108">波兰</option>
+								<option value="112">朝鲜</option>
+								<option value="113">丹麦</option>
+								<option value="118">菲律宾</option>
+								<option value="120">芬兰</option>
+								<option value="125">格鲁吉亚</option>
+								<option value="126">古巴</option>
+								<option value="128">哈萨克斯坦</option>
+								<option value="130">荷兰</option>
+								<option value="133">柬埔寨</option>
+								<option value="134">捷克</option>
+								<option value="136">科索沃</option>
+								<option value="138">克罗地亚</option>
+								<option value="141">黎巴嫩</option>
+								<option value="142">立陶宛</option>
+								<option value="147">罗马尼亚</option>
+								<option value="149">马尔代夫</option>
+								<option value="151">马来西亚</option>
+								<option value="155">蒙古</option>
+								<option value="156">孟加拉国</option>
+								<option value="157">秘鲁</option>
+								<option value="160">摩纳哥</option>
+								<option value="161">墨西哥</option>
+								<option value="162">南非</option>
+								<option value="165">瑞典</option>
+								<option value="166">瑞士</option>
+								<option value="167">萨尔瓦多</option>
+								<option value="172">斯洛伐克</option>
+								<option value="173">斯洛文尼亚</option>
+								<option value="174">斯威士兰</option>
+								<option value="175">苏丹</option>
+								<option value="179">泰国</option>
+								<option value="180">汤加</option>
+								<option value="181">突尼斯</option>
+								<option value="184">委内瑞拉</option>
+								<option value="185">乌克兰</option>
+								<option value="186">乌拉圭</option>
+								<option value="188">希腊</option>
+								<option value="190">叙利亚</option>
+								<option value="191">也门</option>
+								<option value="192">意大利</option>
+								<option value="194">越南</option>
+								<option value="195">赞比亚</option>
+								<option value="196">智利</option>
+								<option value="197">中非共和国</option>
+								<option value="200">西班牙</option>
+								<option value="201">以色列</option>
+							</select>
+						</dd>
+					</div>
+
+					<div class="w26 pt4 pb3 in-text xms bb">
+						<dt class="pr2">项目类：</dt>
+						<dd>
+							<select name="option" id="option" class="form-control">
+								<option value="26">微博 ----0.300元</option>
+								<option value="27">探探 ----0.800元</option>
+								<option value="28">闲鱼 ----2.000元</option>
+								<option value="17">抖音首次 ----6.000元</option>
+								<option value="18">微信 ----8.000元</option>
+								<option value="19">QQ ----2.000元</option>
+								<option value="20">陌陌 ----1.000元</option>
+								<option value="23">全业务(全APP注册)----15.000元</option>
+								<option value="24">企业微信 ----2.000元</option>
+								<option value="25">京东 ----1.000元</option>
+								<option value="29">小红书 ----0.500元</option>
+								<option value="30">珍爱网 ----1.200元</option>
+								<option value="31">知乎 ----1.300元</option>
+								<option value="32">快手 ----3.000元</option>
+								<option value="34">支付宝 ----8.000元</option>
+								<option value="35">淘宝 ----1.200元</option>
+								<option value="36">亚马逊 ----0.500元</option>
+								<option value="37">Soul ----3.000元</option>
+								<option value="38">拼多多 ----0.500元</option>
+								<option value="39">阿里巴巴 ----1.000元</option>
+								<option value="40">宝塔面板 ----1.000元</option>
+								<option value="41">蝙蝠 ----0.300元</option>
+								<option value="43">币安 ----1.000元</option>
+								<option value="44">百度 ----1.200元</option>
+								<option value="45">哔哩哔哩 ----0.500元</option>
+								<option value="46">欧易 ----5.000元</option>
+								<option value="48">连信 ----0.300元</option>
+								<option value="49">钉钉 ----1.000元</option>
+								<option value="50">淘特 ----1.000元</option>
+								<option value="51">得物 ----1.000元</option>
+								<option value="53">QQ邮箱 ----0.500元</option>
+								<option value="54">百度贴吧 ----0.350元</option>
+								<option value="55">高德地图 ----0.350元</option>
+								<option value="56">抖音火山版 ----1.000元</option>
+								<option value="57">美团 ----1.500元</option>
+								<option value="58">58同城 ----0.500元</option>
+								<option value="59">赶集网直聘 ----0.350元</option>
+								<option value="60">积目 ----0.350元</option>
+								<option value="62">饿了么----0.350元</option>
+								<option value="63">他趣 ----0.500元</option>
+								<option value="65">伊对 ----0.500元</option>
+								<option value="66">漂流瓶 ----0.350元</option>
+								<option value="67">百合网 ----0.350元</option>
+								<option value="68">赫兹 ----0.350元</option>
+								<option value="73">TT语音 ----0.350元</option>
+								<option value="74">连信 ----0.350元</option>
+								<option value="75">易信 ----0.400元</option>
+								<option value="77">微光 ----0.350元</option>
+								<option value="78">西瓜视频 ----1.000元</option>
+								<option value="79">腾讯视频 ----0.600元</option>
+								<option value="81">爱奇艺 ----0.350元</option>
+								<option value="82">优酷视频 ----0.350元</option>
+								<option value="95">酷狗音乐 ----0.350元</option>
+								<option value="97">网易音乐 ----0.350元</option>
+								<option value="98">斗鱼 ----0.350元</option>
+								<option value="99">虎牙直播 ----0.350元</option>
+								<option value="100">YY ----0.350元</option>
+								<option value="101">百度网盘 ----0.350元</option>
+								<option value="102">交易猫 ----0.350元</option>
+								<option value="104">今日头条 ----0.350元</option>
+								<option value="105">网易新闻 ----0.350元</option>
+								<option value="107">微视 ----0.350元</option>
+								<option value="109">全民K歌 ----0.350元</option>
+								<option value="110">花椒直播 ----0.350元</option>
+								<option value="114">星光直播 ----0.350元</option>
+								<option value="115">花间 ----0.350元</option>
+								<option value="116">云听 ----0.350元</option>
+								<option value="117">荔枝 ----0.350元</option>
+								<option value="121">曹操出行 ----0.800元</option>
+								<option value="122">嘀嗒出行 ----0.350元</option>
+								<option value="123">T3出行 ----0.500元</option>
+								<option value="124">花小猪出行 ----0.350元</option>
+								<option value="125">去哪儿旅行 ----0.350元</option>
+								<option value="126">飞猪旅行 ----0.350元</option>
+								<option value="127">携程旅行 ----0.350元</option>
+								<option value="128">同程旅行 ----0.350元</option>
+								<option value="129">唯品会 ----0.350元</option>
+								<option value="131">考拉海购 ----0.350元</option>
+								<option value="134">BOSS直聘 ----0.350元</option>
+								<option value="137">大众点评 ----0.350元</option>
+								<option value="154">米哈游 ----0.350元</option>
+								<option value="157">邮储数字 ----0.350元</option>
+								<option value="158">微信小程序 ----0.350元</option>
+								<option value="159">软饭圈 ----0.350元</option>
+								<option value="160">同城寻欢 ----0.350元</option>
+								<option value="161">聊伴 ----0.350元</option>
+								<option value="162">爱聊 ----0.900元</option>
+								<option value="163">心遇 ----0.400元</option>
+								<option value="164">希壤 ----0.350元</option>
+								<option value="165">微店 ----0.300元</option>
+								<option value="166">伴伴 ----0.350元</option>
+								<option value="167">遇见漂流瓶 ----0.350元</option>
+								<option value="168">声洞 ----0.350元</option>
+								<option value="169">语玩 ----0.800元</option>
+								<option value="170">花吱 ----0.350元</option>
+								<option value="171">探遇漂流瓶 ----0.350元</option>
+								<option value="172">恋爱物语 ----0.600元</option>
+								<option value="177">有聊 ----0.350元</option>
+								<option value="178">TiMi语音 ----0.350元</option>
+								<option value="179">冷杉云盘 ----0.450元</option>
+								<option value="180">泡泡聊天 ----0.350元</option>
+								<option value="406">企业微信 ----0.550元</option>
+								<option value="414">京东 ----0.500元</option>
+								<option value="415">微博 ----0.500元</option>
+								<option value="416">探探 ----1.000元</option>
+								<option value="417">闲鱼 ----0.500元</option>
+								<option value="418">小红书 ----0.300元</option>
+								<option value="419">快手 ----0.500元</option>
+								<option value="423">淘宝 ----0.500元</option>
+								<option value="424">亚马逊 ----0.600元</option>
+								<option value="425">Soul ----0.500元</option>
+								<option value="426">拼多多 ----0.300元</option>
+								<option value="427">阿里巴巴 ----0.600元</option>
+								<option value="428">Badoo ----0.500元</option>
+								<option value="429">蝙蝠 ----0.500元</option>
+								<option value="430">Binance 币安 ----0.300元</option>
+								<option value="431">百度 ----0.500元</option>
+								<option value="432">哔哩哔哩 ----0.500元</option>
+								<option value="433">欧易 ----0.700元</option>
+								<option value="434">人人网 ----0.400元</option>
+								<option value="435">火币 ----0.400元</option>
+								<option value="436">抖音 ----2.000元</option>
+								<option value="437">微信 ----1.000元</option>
+								<option value="438">QQ ----0.500元</option>
+								<option value="439">钉钉----0.300元</option>
+								<option value="440">连信----0.250元</option>
+								<option value="13837">爱加速----1.000元</option>
+								<option value="13839">购宝----0.800元</option>
+								<option value="13848">交通银行----3.000元</option>
+								<option value="13856">开云体育----0.800元</option>
+								<option value="13857">今日财经----0.650元</option>
+								<option value="13859">亚博----1.200元</option>
+								<option value="13860">数字RMB----6.500元</option>
+								<option value="13861">波菜平台全业务----2.000元</option>
+								<option value="13862">交友平台全业务----1.500元</option>
+								<option value="13872">正常短信----1.000元</option>
+								<option value="13880">腾讯云----1.200元</option>
+								<option value="13881">网易游戏----0.500元</option>
+								<option value="13882">腾讯游戏----0.500元</option>
+								<option value="13883">对对----1.000元</option>
+								<option value="13884">画包包----0.300元</option>
+								<option value="13885">比心----0.300元</option>
+								<option value="13887">小鹿陪玩----0.300元</option>
+								<option value="13888">陪玩全平台----0.600元</option>
+								<option value="13889">带带----0.300元</option>
+								<option value="13891">迅游----0.500元</option>
+								<option value="13892">QQ二次卡----0.350元</option>
+								<option value="13895">座机群发----0.300元</option>
+								<option value="13896">点淘----0.350元</option>
+								<option value="13897">币coin----0.350元</option>
+								<option value="13902">世纪佳缘----1.500元</option>
+								<option value="14020">星巴克----0.500元</option>
+								<option value="14022">德克士----0.450元</option>
+								<option value="14023">七猫小说----0.350元</option>
+								<option value="14024">秘恋----0.500元</option>
+								<option value="14025">美恰----0.550元</option>
+								<option value="14026">捕鱼大作战----0.350元</option>
+								<option value="14027">有鱼科技----0.550元</option>
+								<option value="14040">东方财富----0.300元</option>
+								<option value="14041">钱能钱包----0.350元</option>
+								<option value="14043">之朋----0.300元</option>
+								<option value="14044">光予----0.500元</option>
+								<option value="14045">某兔直播----0.350元</option>
+								<option value="14046">喜马拉雅----0.350元</option>
+								<option value="14054">泰生活----0.350元</option>
+								<option value="14061">新网----0.500元</option>
+								<option value="14062">虚拟电话----1.600元</option>
+								<option value="14062">下面的国外接码</option>
+								<option value="14062">下面的国外接码</option>
+								<option value="14062">下面的国外接码</option>
+								<option value="33">Potato ----0.300元</option>
+								<option value="21">telegram (纸飞机)----1.500元</option>
+								<option value="22">WhatsApp ----0.500元</option>
+								<option value="13904">flygram----0.300元</option>
+								<option value="420">tiktok ----0.500元</option>
+								<option value="421">Potato ----0.200元</option>
+								<option value="422">alipay ----0.500元</option>
+								<option value="403">telegram ----1.000元</option>
+								<option value="404">WhatsApp ----0.500元</option>
+								<option value="405">facebook ----0.800元</option>
+								<option value="407">WeChat ----0.600元</option>
+								<option value="408">Google Voice ----1.300元</option>
+								<option value="409">Twitter ----0.400元</option>
+								<option value="410">google ----0.750元</option>
+								<option value="411">yahoo ----0.150元</option>
+								<option value="412">paypal ----1.500元</option>
+								<option value="413">line ----0.500元</option>
+								<option value="13893">naver----0.500元</option>
+								<option value="13894">truecaller----0.550元</option>
+								<option value="13898">aicoin----0.400元</option>
+								<option value="13899">Classln----0.600元</option>
+								<option value="13900">mmlive----0.500元</option>
+								<option value="13901">vinted----0.350元</option>
+								<option value="14049">gate----3.000元</option>
+								<option value="13851">Blued----0.550元</option>
+								<option value="14060">MCall----0.350元</option>
+								<option value="445">Bumble ----0.800元</option>
+								<option value="452">discord ----0.750元</option>
+								<option value="453">ebay ----0.230元</option>
+								<option value="459">GuGu Bear ----0.230元</option>
+								<option value="466">instagram ----0.130元</option>
+								<option value="468">lazada ----0.740元</option>
+								<option value="478">nike ----0.350元</option>
+								<option value="488">shopee ----0.230元</option>
+								<option value="494">steam ----0.300元</option>
+								<option value="498">tinder ----0.450元</option>
+								<option value="501">Tuenti ----0.750元</option>
+								<option value="502">uber ----0.450元</option>
+								<option value="503">Uki ----0.350元</option>
+								<option value="504">viber ----0.450元</option>
+							</select>
+						</dd>
+					</div>
+
+					<div class="w26 pt4 in-text">
+						<dt class="bb pr2">指定号码：</dt>
+						<dd>
+							<input type="text" class="form w h9 bb" name="zdhm" placeholder="输入号码或号段前3位或（例：130、188） 可不填" value="" autocomplete="off" />
+						</dd>
+					</div>
+					<!--
+		  <div class="w26 pt4 in-text">
+			<dt class="bb pr2">排除号段：</dt>
+			<dd>
+			  <input type="text" class="form w h9 bb" name="pchd" placeholder="长度为3至7位且支持多个,用逗号分割" value="" autocomplete="off"></dd>
+		  </div>
+		  -->
+					<div class="w26 pt4 in-text">
+						<dt class="pr2">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="get_mobile()">获取号码</button>
+						</dt>
+						<dd></dd>
+						<dt class="pr2">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="black_mobile()">拉黑号码</button>
+						</dt>
+						<dd></dd>
+						<dt class="pr2">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="release_mobile()">释放号码</button>
+						</dt>
+					</div>
+					<div class="w26 pt4 in-text">
+						<dt class="bb pr2">手机号码：</dt>
+						<dd>
+							<input type="text" class="form w h9 bb" name="sjhm" placeholder="请先取号" value="" autocomplete="off" />
+						</dd>
+						<dt class="bb pr2 r">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="copyCode($(&#39;[name=sjhm]&#39;).val().split(&#39;|&#39;)[0],true)">复制</button>
+						</dt>
+					</div>
+					<div class="w26 pt4 in-text">
+						<dt class="bb pr2">验证码：</dt>
+						<dd>
+							<input type="text" class="form w h9 bb" name="yzm" placeholder="等待获取验证码" value="" autocomplete="off" />
+						</dd>
+						<dt class="bb pr2 r">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="copyCode($(&#39;[name=yzm]&#39;).val(),true)">复制</button>
+						</dt>
+					</div>
+					<div class="w26 pt4 in-text">
+						<dt class="bb pr2">短信内容：</dt>
+						<dd>
+							<textarea type="text" class="form w h9 bb" name="dxnr" placeholder="等待获取短信内容" value="" autocomplete="off"></textarea>
+						</dd>
+						<dt class="bb pr2 r">
+							<button class="btn btn-sm btn-lan sl btn-1 rx2" onclick="copyCode($(&#39;[name=dxnr]&#39;).val(),true)">复制</button>
+						</dt>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="t-main mb7 h14 dhc f4" style="display: none">
+			<p class="">
+				<span></span>
+				<span class="ml3"></span>
+			</p>
+			<p class="mt1">
+				<span>Copyright © 2022</span>
+				<span class="ml1">欢迎光临</span>
+				<!-- <a class="ml1 line" href="https://beian.miit.gov.cn/" target="_blank"></a> -->
+			</p>
+		</div>
+
+		<span class="ajaxshow" id="ajaxshow"></span>
+		<span class="ajaxshow" id="ajaxload"></span>
+
+		<script>
+			// $('#type').change(() => {
+			// 	// console.log('change');
+			// 	// console.log($('#cont select option:selected').text());
+			// 	console.log($('#type').val())
+			// 	guojia_load($('#type').val())
+			// 	setTimeout(function () {
+			// 		option_load($('#type').val(), $('#guojia').val())
+			// 	}, 500)
+			// })
+
+			// function guojia_load(type) {
+			// 	$.getJSON('get_guojia', { type: type }, function (res) {
+			// 		if (res.code == 200) {
+			// 			var html = ''
+			// 			for (var i = 0; i < res.data.length; i++) {
+			// 				html += "<option value='" + res.data[i].id + "'>" + res.data[i].name + '</option>'
+			// 			}
+
+			// 			$('#guojia').html('')
+			// 			$('#guojia').append(html)
+			// 		} else {
+			// 		}
+			// 	})
+			// }
+
+			// $('#guojia').change(() => {
+			// 	console.log($('#guojia').val())
+			// 	option_load($('#type').val(), $('#guojia').val())
+			// })
+
+			// function option_load(type, guojia_id) {
+			// 	if (type == '1') {
+			// 		$.getJSON('get_option', { guojia_id: 3 }, function (res) {
+			// 			if (res.code == 200) {
+			// 				var html = ''
+			// 				for (var i = 0; i < res.data.length; i++) {
+			// 					html += "<option value='" + res.data[i].id + "'>" + res.data[i].name + '----' + res.data[i].price + '元</option>'
+			// 				}
+
+			// 				$('#option').html('')
+			// 				$('#option').append(html)
+			// 			} else {
+			// 			}
+			// 		})
+			// 	} else {
+			// 		$.getJSON('get_option', { guojia_id: guojia_id }, function (res) {
+			// 			if (res.code == 200) {
+			// 				var html = ''
+			// 				for (var i = 0; i < res.data.length; i++) {
+			// 					html += "<option value='" + res.data[i].id + "'>" + res.data[i].name + '----' + res.data[i].price + '元</option>'
+			// 				}
+
+			// 				$('#option').html('')
+			// 				$('#option').append(html)
+			// 			} else {
+			// 			}
+			// 		})
+			// 	}
+			// }
+
+			// function login_load() {
+			// 	$.getJSON('/loginInfo', '', function (res) {
+			// 		if (res.code == 200) {
+			// 			console.log(res.data)
+			// 		} else {
+			// 			location.href = 'login.html'
+			// 		}
+			// 	})
+			// }
+
+			// login_load()
+			// guojia_load($('#type').val())
+			// option_load($('#type').val(), $('#guojia').val())
+		</script>
+
+		<style class="AC-highLightRule">
+			.acWHSet {
+				display: inline !important;
+				box-shadow: -3px 0px 3px 0.15px rgba(0, 0, 0, 0.15);
+				color: rgb(0, 0, 0);
+				font-weight: inherit;
+			}
+			.acWHSet[data='cors'] {
+				background-color: #ffff80;
+			}
+			.acWHSet[data='错误什么意思'] {
+				background-color: #90ee90;
+			}
+		</style>
+	</body>
+</html>
