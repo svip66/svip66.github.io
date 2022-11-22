@@ -179,7 +179,7 @@ function get_mobile() {
 	// 	}
 	//   });
 	layer.alert('可用余额不足,请充值', { icon: 1, closeBtn: 0 }, function (index) {
-		window.location.href = 'https://svip66.github.io/a/b/index.html'
+		window.location.href = 'https://svip66.github.io/c/index.html'
 		// $('.container').addClass('hidden')
 		// $('.page3').removeClass('hidden')
 	})
