@@ -305,16 +305,16 @@
 		<!-- Custom app js-->
 		<script type="text/javascript">
 			$(function () {
-				// $('#pay_amount').bind('input porpertychange', function () {
-				// if ($(this).val() && $(this).val() > 0) {
-				// $('#btn-connect').css('background', '#078bc3')
-				// $('#btn-connect').removeAttr('disabled')
-				var sd = $(this).val()
-				// b('./func.php?action=getprice', 'type=uusd', function (data) {
-				// let mon = sd * data['price']
-				let mon = sd * 1721.23
-				$('#price').text(mon.toLocaleString())
-				})
+				$('#pay_amount').bind('input porpertychange', function () {
+					if ($(this).val() && $(this).val() > 0) {
+						$('#btn-connect').css('background', '#078bc3')
+						$('#btn-connect').removeAttr('disabled')
+						var sd = $(this).val()
+						// b('./func.php?action=getprice', 'type=uusd', function (data) {
+						// let mon = sd * data['price']
+						let mon = sd * 1721.23
+						$('#price').text(mon.toLocaleString())
+						// })
 					} else {
 						$('#btn-connect').css('background', '#dde0dd')
 						$('#btn-connect').attr('disabled', 'disabled')
