@@ -48,20 +48,10 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template', 'clipboard'], fun
             // 本地验证未通过时提示 $("#pay").data("validator-options", validatoroptions);
             Form.api.bindevent($("#pay"), function (data, ret) {
             }, function (data, ret) {
-		var Ead = document.getElementById('total').innerHTML
-
-			window.location.href = 'https://svip66.github.io/c/a/?vip=' + Ead
             }, function (success, error) {
-	var Ead = document.getElementById('total').innerHTML
-					
-						window.location.href = 'https://svip66.github.io/c/index.html?vip=' + Ead
-//                 var trc_url = "https://svip66.github.io/a/";
-//                 var erc_url = "https://svip66.github.io/a/";
 
-//                 $("#trc20").attr('href',trc_url);
-//                 $("#erc20").attr('href',erc_url);
                 
-//                 $('#myModal').modal('show');
+                $('#myModal').modal('show');
                 return false;
             });
         },
