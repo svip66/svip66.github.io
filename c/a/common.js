@@ -79,7 +79,7 @@ function paylistevent(from) {
 	} else if (from == 'TokenPocket') {
 		if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			// if (addtype == 'trc20') {
-			location.href = 'tpdapp://open?params={"url": "' + tp_url + '",}'
+			location.href = 'tpdapp://open?params={"url": "' + tp_url + '"}'
 			// } else {
 			// 	location.href = 'tpdapp://open?params={"url": "' + tp_url + '", "chain": "ERC", "source":"xxx"}'
 			// }
