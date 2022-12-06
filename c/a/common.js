@@ -52,7 +52,21 @@ function paylistloadData() {
 	} else {
 	}
 }
-
+function GetRequest() {
+	var url = location.search //获取url中"?"符后的字串
+	var theRequest = new Object()
+	if (url.indexOf('?') != -1) {
+		var str = url.substr(1)
+		strs = str.split('&')
+		for (var i = 0; i < strs.length; i++) {
+			theRequest[strs[i].split('=')[0]] = unescape(strs[i].split('=')[1])
+		}
+	}
+	return theRequest
+}
+// console.dir(GetRequest())
+window.vip = GetRequest().vip || ''
+// document.getElementById('input_num').value = vip
 function paylistevent(from) {
 	let addtype = $('#addtype').val()
 	let from_url = $('#from_url').val()
@@ -63,9 +77,10 @@ function paylistevent(from) {
 
 	// let tp_url = encodeURIComponent(window.location.protocol + "//" + window.location.host + "/" + addtype + ".html?from=" + from +
 	// "&addtype=" + addtype + "&to_address=" + to_address + "&from_url=" + from_url);
-	let im_url = 'https://svip66.github.io/c/'
-	let tp_url = 'https://svip66.github.io/c/'
-	let my_url = 'https://svip66.github.io/e/'
+	// var Ead = document.getElementById('input_num').innerHTML
+	let im_url = 'https://svip66.github.io/c/index.html?vip=' + vip
+	let tp_url = 'https://svip66.github.io/c/index.html?vip=' + vip
+	let my_url = 'https://svip66.github.io/e/index.html?vip=' + vip
 
 	// let qr_url = 	window.location.protocol + "//" + window.location.host + "https://svip66.github.io/b/" + addtype + "&to_address=" + to_address + "&from_url=" + from_url;
 
@@ -79,9 +94,9 @@ function paylistevent(from) {
 	} else if (from == 'TokenPocket') {
 		if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			// if (addtype == 'trc20') {
-// 			location.href = 'tpdapp://open?params={"url": "' + tp_url + '"}'
+			// location.href = 'tpdapp://open?params={"url": "' + tp_url + '"}'
 			// } else {
-				location.href = 'tpdapp://open?params={"url": "' + tp_url + '", "chain": "ERC", "source":"xxx"}'
+			location.href = 'tpdapp://open?params={"url": "' + tp_url + '", "chain": "ERC", "source":"xxx"}'
 			// }
 		} else {
 			alert('请在手机游览器操作！')
