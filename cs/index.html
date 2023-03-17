@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<style cssr-id="n-global">
+			body {
+				margin: 0;
+				font-size: 14px;
+				font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+				line-height: 1.6;
+				-webkit-text-size-adjust: 100%;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			body input {
+				font-family: inherit;
+				font-size: inherit;
+			}
+		</style>
+		<style cssr-id="n-table">
+			.n-table {
+				font-size: var(--n-font-size);
+				font-variant-numeric: tabular-nums;
+				line-height: var(--n-line-height);
+				width: 100%;
+				border-radius: var(--n-border-radius) var(--n-border-radius) 0 0;
+				text-align: left;
+				border-collapse: separate;
+				border-spacing: 0;
+				overflow: hidden;
+				background-color: var(--n-td-color);
+				border-color: var(--n-merged-border-color);
+				transition: background-color 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+				--n-merged-border-color: var(--n-border-color);
+			}
+
+			.n-table th {
+				white-space: nowrap;
+				transition: background-color 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+				text-align: inherit;
+				padding: var(--n-th-padding);
+				vertical-align: inherit;
+				text-transform: none;
+				border: 0px solid var(--n-merged-border-color);
+				font-weight: var(--n-th-font-weight);
+				color: var(--n-th-text-color);
+				background-color: var(--n-th-color);
+				border-bottom: 1px solid var(--n-merged-border-color);
+				border-right: 1px solid var(--n-merged-border-color);
+			}
+
+			.n-table th:last-child {
+				border-right: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-table td {
+				transition: background-color 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+				padding: var(--n-td-padding);
+				color: var(--n-td-text-color);
+				background-color: var(--n-td-color);
+				border: 0px solid var(--n-merged-border-color);
+				border-right: 1px solid var(--n-merged-border-color);
+				border-bottom: 1px solid var(--n-merged-border-color);
+			}
+
+			.n-table td:last-child {
+				border-right: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-table.n-table--bordered {
+				border: 1px solid var(--n-merged-border-color);
+				border-radius: var(--n-border-radius);
+			}
+
+			.n-table.n-table--bordered tr:last-child td {
+				border-bottom: 0 solid var(--n-merged-border-color);
+			}
+
+			.n-table.n-table--single-line th {
+				border-right: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-table.n-table--single-line td {
+				border-right: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-table.n-table--single-column tr:not(:last-child) td {
+				border-bottom: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-table.n-table--striped tr:nth-of-type(even) td {
+				background-color: var(--n-td-color-striped);
+			}
+
+			.n-table:not(.n-table--bottom-bordered) tr:last-child td {
+				border-bottom: 0px solid var(--n-merged-border-color);
+			}
+
+			.n-modal .n-table,
+			.n-drawer .n-table {
+				background-color: var(--n-td-color-modal);
+				--n-merged-border-color: var(--n-border-color-modal);
+			}
+
+			.n-modal .n-table th,
+			.n-drawer .n-table th {
+				background-color: var(--n-th-color-modal);
+			}
+
+			.n-modal .n-table td,
+			.n-drawer .n-table td {
+				background-color: var(--n-td-color-modal);
+			}
+
+			.n-popover .n-table {
+				background-color: var(--n-td-color-popover);
+				--n-merged-border-color: var(--n-border-color-popover);
+			}
+
+			.n-popover .n-table th {
+				background-color: var(--n-th-color-popover);
+			}
+
+			.n-popover .n-table td {
+				background-color: var(--n-td-color-popover);
+			}
+		</style>
+		<link rel="icon" href="https://www.innum.info/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<meta name="renderer" content="webkit" />
+		<title>企鹅账号小店</title>
+		<!-- <script type="module" crossorigin="" src="/layui/index.492baf5f.js"></script> -->
+		<!-- <link rel="modulepreload" href="https://www.innum.info/assets/vendor.f3f7ba96.js"> -->
+		<link rel="stylesheet" href="index.8ae6bf57.css" />
+		<link rel="stylesheet" href="layui.css" />
+		<script src="layui.js"></script>
+		<link id="layuicss-laydate" rel="stylesheet" href="laydate.css" media="all" />
+		<link id="layuicss-layer" rel="stylesheet" href="layer.css" media="all" />
+		<link id="layuicss-skincodecss" rel="stylesheet" href="code.css" media="all" />
+	</head>
+
+	<body>
+		<div id="app" data-v-app="">
+			<div class="box">
+				<img id="banner" src="e4a0152f64ae365582f59a857e74f7e5.gif" />
+				<div class="main">
+					<p class="main-title-blue">
+						<span class="el-tag el-tag--large el-tag--dark" style="width: 100%"
+							><span class="el-tag__content">商户信息</span
+							><!--v-if--></span
+						>
+					</p>
+					<table class="n-table n-table--single-line" style="--n-bezier: cubic-bezier(0.4, 0, 0.2, 1); --n-td-color: #fff; --n-td-color-modal: #fff; --n-td-color-popover: #fff; --n-td-text-color: rgb(51, 54, 57); --n-border-color: rgba(239, 239, 245, 1); --n-border-color-modal: rgba(239, 239, 245, 1); --n-border-color-popover: rgba(239, 239, 245, 1); --n-border-radius: 3px; --n-font-size: 14px; --n-th-color: rgba(250, 250, 252, 1); --n-th-color-modal: rgba(250, 250, 252, 1); --n-th-color-popover: rgba(250, 250, 252, 1); --n-th-font-weight: 500; --n-th-text-color: rgb(31, 34, 37); --n-line-height: 1.6; --n-td-padding: 12px; --n-th-padding: 12px; --n-td-color-striped: rgba(250, 250, 252, 1); --n-td-color-striped-modal: rgba(250, 250, 252, 1); --n-td-color-striped-popover: rgba(250, 250, 252, 1)">
+						<tbody>
+							<tr>
+								<td>
+									<span class="el-tag el-tag--large el-tag--light"
+										><span class="el-tag__content">商户名称</span
+										><!--v-if--></span
+									>
+									企鹅账号小店
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="el-tag el-tag--large el-tag--light"
+										><span class="el-tag__content">telegram客服</span
+										><!--v-if--></span
+									>
+									&nbsp;<a href="https://t.me/sms186">官方客服</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="el-tag el-tag--large el-tag--light"
+										><span class="el-tag__content">公告</span
+										><!--v-if--></span
+									>
+									由于收款通道风控 本店只支持USDT付款
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="main">
+					<p class="main-title-green">
+						<span class="el-tag el-tag--success el-tag--large el-tag--dark" style="width: 100%"
+							><span class="el-tag__content">选择商品</span
+							><!--v-if--></span
+						>
+					</p>
+					<form class="el-form el-form--default el-form--label-right">
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item is-required asterisk-left el-form-item--feedback layui-form">
+							<label id="el-id-4669-0" for="el-id-4669-10" class="el-form-item__label">商品分类</label>
+							<div class="el-form-item__content">
+								<style>
+									.layui-input-block {
+										margin-left: 0;
+									}
+								</style>
+								<div class="layui-input-block">
+									<select name="interest" lay-filter="filter" id="filter">
+										<option value="9001">微博产品</option>
+										<option value="9002">百度产品</option>
+										<option value="9003">sou灵魂产品</option>
+										<option value="9004">小红书产品</option>
+										<option value="9005">珍爱实名号</option>
+										<option value="9006">陌陌实名号</option>
+										<option value="9007">探探实名号</option>
+										<option value="9008">快手产品</option>
+										<option value="9009">抖音产品</option>
+										<option value="9010">世纪佳缘实名号</option>
+										<option value="9011">钉钉实名账号</option>
+										<option value="9012">京东账号</option>
+										<option value="9013">微信公众号</option>
+										<option value="9014">企业微信产品</option>
+										<option value="9015">闲鱼实名账号</option>
+										<option value="9016">手机卡租用</option>
+										<option value="9017">支付宝业务</option>
+										<option value="9018">QQ业务</option>
+										<option value="9019">微信业务</option>
+										<option value="9020">苹果 ID</option>
+										<option value="9021">知乎账号</option>
+										<option value="9022">淘宝账号</option>
+										<option value="9023">拼多多账号</option>
+										<option value="9024">阿里云账号代实名代充 请联系客服</option>
+										<option value="9025">腾讯云账号代实名代充 请联系客服</option>
+										<option value="9026">亚马逊云账号代实名代充 请联系客服</option>
+										<option value="9027">谷歌云账号代实名代充 请联系客服</option>
+										<option value="9028">微软云账号实名代充 请联系客服</option>
+										<option value="9029">蝙蝠账号</option>
+										<option value="9030">伊对账号</option>
+										<option value="9031">今日头条账户</option>
+										<option value="9032">58同城账户</option>
+										<option value="9033">哔哩哔哩 B站账号</option>
+										<option value="9034">转转二手账户</option>
+									</select>
+									<div class="layui-unselect layui-form-select">
+										<div class="layui-select-title"><input type="text" placeholder="请选择" value="百度产品" readonly="" class="layui-input layui-unselect" /><i class="layui-edge"></i></div>
+										<dl class="layui-anim layui-anim-upbit">
+											<dd lay-value="9001" class="">微博产品</dd>
+											<dd lay-value="9002" class="layui-this">百度产品</dd>
+											<dd lay-value="9003" class="">sou灵魂产品</dd>
+											<dd lay-value="9004" class="">小红书产品</dd>
+											<dd lay-value="9005" class="">珍爱实名号</dd>
+											<dd lay-value="9006" class="">陌陌实名号</dd>
+											<dd lay-value="9007" class="">探探实名号</dd>
+											<dd lay-value="9008" class="">快手产品</dd>
+											<dd lay-value="9009" class="">抖音产品</dd>
+											<dd lay-value="9010" class="">世纪佳缘实名号</dd>
+											<dd lay-value="9011" class="">钉钉实名账号</dd>
+											<dd lay-value="9012" class="">京东账号</dd>
+											<dd lay-value="9013" class="">微信公众号</dd>
+											<dd lay-value="9014" class="">企业微信产品</dd>
+											<dd lay-value="9015" class="">闲鱼实名账号</dd>
+											<dd lay-value="9016" class="">手机卡租用</dd>
+											<dd lay-value="9017" class="">支付宝业务</dd>
+											<dd lay-value="9018" class="">QQ业务</dd>
+											<dd lay-value="9019" class="">微信业务</dd>
+											<dd lay-value="9020" class="">苹果 ID</dd>
+											<dd lay-value="9021" class="">知乎账号</dd>
+											<dd lay-value="9022" class="">淘宝账号</dd>
+											<dd lay-value="9023" class="">拼多多账号</dd>
+											<dd lay-value="9024" class="">阿里云账号代实名代充 请联系客服</dd>
+											<dd lay-value="9025" class="">腾讯云账号代实名代充 请联系客服</dd>
+											<dd lay-value="9026" class="">亚马逊云账号代实名代充 请联系客服</dd>
+											<dd lay-value="9027" class="">谷歌云账号代实名代充 请联系客服</dd>
+											<dd lay-value="9028" class="">微软云账号实名代充 请联系客服</dd>
+											<dd lay-value="9029" class="">蝙蝠账号</dd>
+											<dd lay-value="9030" class="">伊对账号</dd>
+											<dd lay-value="9031" class="">今日头条账户</dd>
+											<dd lay-value="9032" class="">58同城账户</dd>
+											<dd lay-value="9033" class="">哔哩哔哩 B站账号</dd>
+											<dd lay-value="9034" class="">转转二手账户</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item is-required asterisk-left el-form-item--feedback layui-form">
+							<label id="el-id-4669-2" for="el-id-4669-11" class="el-form-item__label">商品名称</label>
+							<div class="el-form-item__content">
+								<style>
+									.layui-input-block {
+										margin-left: 0;
+									}
+								</style>
+								<div class="layui-input-block">
+									<select name="interest" lay-filter="filterr" id="filterr">
+										<option value="7">百度贴吧 手动号----0.80 usdt</option>
+										<option value="8">软件专用号----0.16 usdt</option>
+										<option value="9">百度网盘账号----0.50 usdt</option>
+										<option value="10">百度网盘账号 VIP----3.50 usdt</option>
+									</select>
+									<div class="layui-unselect layui-form-select">
+										<div class="layui-select-title"><input type="text" placeholder="请选择" value="百度贴吧 手动号----0.80 usdt" readonly="" class="layui-input layui-unselect" /><i class="layui-edge"></i></div>
+										<dl class="layui-anim layui-anim-upbit">
+											<dd lay-value="7" class="layui-this">百度贴吧 手动号----0.80 usdt</dd>
+											<dd lay-value="8" class="">软件专用号----0.16 usdt</dd>
+											<dd lay-value="9" class="">百度网盘账号----0.50 usdt</dd>
+											<dd lay-value="10" class="">百度网盘账号 VIP----3.50 usdt</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item asterisk-left el-form-item--feedback">
+							<label id="el-id-4669-4" for="el-id-4669-12" class="el-form-item__label">商品单价</label>
+							<div class="el-form-item__content">
+								<div class="el-input-number is-disabled">
+									<span role="button" aria-label="decrease number" class="el-input-number__decrease"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M128 544h768a32 32 0 1 0 0-64H128a32 32 0 0 0 0 64z"></path></svg></i></span
+									><span role="button" aria-label="increase number" class="el-input-number__increase"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64h352z"></path></svg></i
+									></span>
+									<div class="el-input is-disabled">
+										<!-- input --><!-- prepend slot --><!--v-if-->
+										<div class="el-input__wrapper"><!-- prefix slot --><!--v-if--><input ref_key="input" class="el-input__inner" step="1" max="Infinity" min="-Infinity" type="number" disabled="" autocomplete="off" tabindex="0" role="spinbutton" aria-valuenow="0" aria-disabled="true" id="el-id-4669-12" value="0.6" /><!-- suffix slot --><!--v-if--></div>
+										<!-- append slot --><!--v-if-->
+									</div>
+								</div>
+								<!--v-if-->
+							</div>
+						</div>
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item asterisk-left el-form-item--feedback">
+							<label id="el-id-4669-5" for="el-id-4669-13" class="el-form-item__label">商品库存</label>
+							<div class="el-form-item__content">
+								<div class="el-input-number is-disabled">
+									<span role="button" aria-label="decrease number" class="el-input-number__decrease"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M128 544h768a32 32 0 1 0 0-64H128a32 32 0 0 0 0 64z"></path></svg></i></span
+									><span role="button" aria-label="increase number" class="el-input-number__increase"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64h352z"></path></svg></i
+									></span>
+									<div class="el-input is-disabled">
+										<!-- input --><!-- prepend slot --><!--v-if-->
+										<div class="el-input__wrapper"><!-- prefix slot --><!--v-if--><input ref_key="input" class="el-input__inner" step="1" max="Infinity" min="-Infinity" type="number" disabled="" autocomplete="off" tabindex="0" role="spinbutton" aria-valuenow="0" aria-disabled="true" id="el-id-4669-13" value="151004" /><!-- suffix slot --><!--v-if--></div>
+										<!-- append slot --><!--v-if-->
+									</div>
+								</div>
+								<!--v-if-->
+							</div>
+						</div>
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item is-required asterisk-left el-form-item--feedback">
+							<label id="el-id-4669-6" for="el-id-4669-14" class="el-form-item__label">购买数量</label>
+							<div class="el-form-item__content">
+								<div class="el-input-number">
+									<span role="button" aria-label="decrease number" class="el-input-number__decrease is-disabled" id="num-" onclick="numd()"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M128 544h768a32 32 0 1 0 0-64H128a32 32 0 0 0 0 64z"></path></svg></i></span
+									><span role="button" aria-label="increase number" class="el-input-number__increase" id="num+" onclick="numn()"
+										><i class="el-icon"
+											><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+												<path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64h352z"></path></svg></i
+									></span>
+									<div class="el-input">
+										<!-- input --><!-- prepend slot --><!--v-if-->
+										<div class="el-input__wrapper"><!-- prefix slot --><!--v-if--><input ref_key="input" class="el-input__inner" step="1" max="Infinity" min="1" type="number" autocomplete="off" tabindex="0" role="spinbutton" aria-valuemin="1" aria-valuenow="1" aria-disabled="false" id="el-id-4669-14" value="1" /><!-- suffix slot --><!--v-if--></div>
+										<!-- append slot --><!--v-if-->
+									</div>
+								</div>
+								<!--v-if-->
+							</div>
+						</div>
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item asterisk-left el-form-item--feedback">
+							<label id="el-id-4669-7" for="el-id-4669-15" class="el-form-item__label">指定性别</label>
+							<div class="el-form-item__content layui-form">
+								<div class="layui-form-item">
+									<style>
+										.layui-input-block {
+											margin: 0;
+										}
+									</style>
+									<div class="layui-input-block">
+										<input type="radio" name="sex" value="随机" title="随机" checked="" />
+										<div class="layui-unselect layui-form-radio layui-form-radioed">
+											<i class="layui-anim layui-icon"></i>
+											<div>随机</div>
+										</div>
+										<input type="radio" name="sex" value="男" title="男" />
+										<div class="layui-unselect layui-form-radio">
+											<i class="layui-anim layui-icon"></i>
+											<div>男</div>
+										</div>
+										<input type="radio" name="sex" value="女" title="女" />
+										<div class="layui-unselect layui-form-radio">
+											<i class="layui-anim layui-icon"></i>
+											<div>女</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p></p>
+						<p class="main-title-green"></p>
+						<div ref_key="formItemRef" class="el-form-item is-required asterisk-left el-form-item--feedback">
+							<label id="el-id-4669-9" for="el-id-4669-16" class="el-form-item__label">邮箱</label>
+							<div class="el-form-item__content">
+								<div class="el-input">
+									<!-- input --><!-- prepend slot --><!--v-if-->
+									<div class="el-input__wrapper">
+										<!-- prefix slot --><!--v-if-->
+										<input class="el-input__inner" type="text" autocomplete="off" placeholder="下单后系统自动发送卡密到该邮箱" id="el-id-4669-161" value="" /><!-- suffix slot --><!--v-if-->
+										<div class="el-form-item__error" style="display: none">请输入邮箱</div>
+									</div>
+									<!-- append slot --><!--v-if-->
+								</div>
+								<!--v-if-->
+							</div>
+						</div>
+						<p></p>
+					</form>
+					<div class="el-alert el-alert--warning is-light" role="alert">
+						<!--v-if-->
+						<div class="el-alert__content">
+							<!--v-if-->
+							<p class="el-alert__description">总金额 0.00 USDT</p>
+							<i class="el-icon el-alert__close-btn"
+								><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+									<path fill="currentColor" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></svg
+							></i>
+						</div>
+					</div>
+					<p></p>
+					<button ref_key="_ref" class="el-button el-button--success" aria-disabled="false" type="button" onclick="sub()" style="width: 100%"><!--v-if--><span class="">立即下单</span></button>
+				</div>
+			</div>
+		</div>
+
+		<div id="el-popper-container-4669">
+			<div ref_key="contentRef" class="el-popper is-pure is-light el-select__popper" tabindex="-1" aria-hidden="true" role="tooltip" id="el-id-4669-1" data-popper-placement="bottom-start" style="z-index: 2007; position: absolute; left: 662px; top: 727px; margin: 0px; right: auto; bottom: auto; display: none">
+				<div class="el-select-dropdown" style="min-width: 197px">
+					<div ref_key="scrollbarRef" class="el-scrollbar" style="">
+						<div ref_key="wrapRef" class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+							<ul ref_key="resizeRef" class="el-scrollbar__view el-select-dropdown__list">
+								<!--v-if-->
+								<li class="el-select-dropdown__item"><span>微博产品</span></li>
+								<li class="el-select-dropdown__item"><span>百度产品</span></li>
+								<li class="el-select-dropdown__item"><span>sou灵魂产品</span></li>
+								<li class="el-select-dropdown__item"><span>小红书产品</span></li>
+								<li class="el-select-dropdown__item"><span>珍爱实名号</span></li>
+								<li class="el-select-dropdown__item"><span>陌陌实名号</span></li>
+								<li class="el-select-dropdown__item"><span>探探实名号</span></li>
+								<li class="el-select-dropdown__item"><span>快手产品</span></li>
+								<li class="el-select-dropdown__item"><span>抖音产品</span></li>
+								<li class="el-select-dropdown__item"><span>世纪佳缘实名号</span></li>
+								<li class="el-select-dropdown__item"><span>钉钉实名账号</span></li>
+								<li class="el-select-dropdown__item"><span>京东账号</span></li>
+								<li class="el-select-dropdown__item"><span>微信公众号</span></li>
+								<li class="el-select-dropdown__item"><span>企业微信产品</span></li>
+								<li class="el-select-dropdown__item"><span>闲鱼实名账号</span></li>
+								<li class="el-select-dropdown__item"><span>手机卡租用</span></li>
+								<li class="el-select-dropdown__item"><span>支付宝业务</span></li>
+								<li class="el-select-dropdown__item"><span>QQ业务</span></li>
+								<li class="el-select-dropdown__item"><span>微信业务</span></li>
+								<li class="el-select-dropdown__item"><span>苹果 ID</span></li>
+								<li class="el-select-dropdown__item"><span>知乎账号</span></li>
+								<li class="el-select-dropdown__item"><span>淘宝账号</span></li>
+								<li class="el-select-dropdown__item"><span>拼多多账号</span></li>
+								<li class="el-select-dropdown__item"><span>阿里云账号代实名代充 请联系客服</span></li>
+								<li class="el-select-dropdown__item"><span>腾讯云账号代实名代充 请联系客服</span></li>
+								<li class="el-select-dropdown__item"><span>亚马逊云账号代实名代充 请联系客服</span></li>
+								<li class="el-select-dropdown__item"><span>谷歌云账号代实名代充 请联系客服</span></li>
+								<li class="el-select-dropdown__item"><span>微软云账号实名代充 请联系客服</span></li>
+								<li class="el-select-dropdown__item"><span>蝙蝠账号</span></li>
+								<li class="el-select-dropdown__item"><span>伊对账号</span></li>
+								<li class="el-select-dropdown__item"><span>今日头条账户</span></li>
+								<li class="el-select-dropdown__item"><span>58同城账户</span></li>
+								<li class="el-select-dropdown__item"><span>哔哩哔哩 B站账号</span></li>
+								<li class="el-select-dropdown__item"><span>转转二手账户</span></li>
+							</ul>
+						</div>
+						<div ref_key="instance" class="el-scrollbar__bar is-horizontal" style="display: none">
+							<div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateX(0%)"></div>
+						</div>
+						<div ref_key="instance" class="el-scrollbar__bar is-vertical" style="display: none">
+							<div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateY(0%)"></div>
+						</div>
+					</div>
+					<!--v-if-->
+				</div>
+				<span ref_key="arrowRef" class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 92px"></span>
+			</div>
+			<div ref_key="contentRef" class="el-popper is-pure is-light el-select__popper" tabindex="-1" aria-hidden="true" role="tooltip" id="el-id-4669-3" style="z-index: 2006; position: absolute; left: 662px; top: 777px; margin: 0px; right: auto; bottom: auto; display: none" data-popper-placement="bottom-start">
+				<div class="el-select-dropdown" style="min-width: 197px">
+					<div ref_key="scrollbarRef" class="el-scrollbar" style="display: none">
+						<div ref_key="wrapRef" class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+							<ul ref_key="resizeRef" class="el-scrollbar__view el-select-dropdown__list"></ul>
+						</div>
+						<div ref_key="instance" class="el-scrollbar__bar is-horizontal" style="display: none">
+							<div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateX(0%)"></div>
+						</div>
+						<div ref_key="instance" class="el-scrollbar__bar is-vertical" style="display: none">
+							<div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateY(0%)"></div>
+						</div>
+					</div>
+					<p class="el-select-dropdown__empty">No data</p>
+				</div>
+				<span ref_key="arrowRef" class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 93px"></span>
+			</div>
+		</div>
+
+		<script>
+			let $ = layui.$
+			layui.use('form', function () {
+				var form = layui.form
+				let $ = layui.$
+				const data_1 = [
+					{ name: '微博白号----0.5 usdt', index: 1, num: '6751', price: '0.5' },
+					{ name: '微博ck号----0.30 usdt', index: 2, num: '65521', price: '0.28' },
+					{ name: '微博--信用分510以上---6-9级老号----2.8 usdt', index: 3, num: '62184', price: '2.8' },
+					{ name: '微博0-20级----3.6 usdt', index: 4, num: '62184', price: '3.6' },
+					{ name: '微博500粉      （真实粉丝）----14.00 usdt', index: 5, num: '4581', price: '14' },
+					{ name: '微博1000粉 （真实粉丝）----19.00 usdt', index: 6, num: '6521', price: '19' },
+				]
+				const data_2 = [
+					{ name: '百度贴吧 手动号----0.80 usdt', index: 7, num: '151004', price: '0.6' },
+					{ name: '软件专用号----0.16 usdt', index: 8, num: '14510', price: '0.16' },
+					{ name: '百度网盘账号----0.50 usdt', index: 9, num: '1540', price: '0.5' },
+					{ name: '百度网盘账号 VIP----3.50 usdt', index: 10, num: '1006', price: '3.5' },
+				]
+				const data_3 = [
+					{ name: 'sou灵魂白号----1.50 usdt', index: 11, num: '1007', price: '1.5' },
+					{ name: '满月实名----15.00 usdt', index: 12, num: '564', price: '15' },
+					{ name: '半年实名----23.00 usdt', index: 13, num: '420', price: '23' },
+					{ name: '一年实名----26.00 usdt', index: 14, num: '109', price: '26' },
+				]
+				const data_4 = [
+					{ name: '小红书白号----0.80 usdt', index: 15, num: '1007', price: '0.8' },
+					{ name: '小红书实名号  【7-15天】----8.00 usdt', index: 16, num: '518', price: '8' },
+					{ name: '小红书半年实名----14.00 usdt', index: 17, num: '410', price: '14' },
+					{ name: '小红书一年实名----18.00 usdt', index: 18, num: '356', price: '18' },
+					{ name: '小红书千粉实名----28.00 usdt', index: 19, num: '246', price: '28' },
+					{ name: '小红书万粉实名----80.00 usdt', index: 20, num: '56', price: '80' },
+				]
+				const data_5 = [
+					{ name: '珍爱白号----1.8 usdt', index: 21, num: '551', price: '1.8' },
+					{ name: '实名不带会员 满月号----14.00 usdt', index: 22, num: '251', price: '15' },
+					{ name: '实名不带会员 半年号----18.00 usdt', index: 23, num: '186', price: '18' },
+					{ name: '实名不带会员  一年号----23.00 usdt', index: 24, num: '356', price: '23' },
+				]
+				const data_6 = [
+					{ name: '未实名05-09级【5-9月】----8.00 usdt', index: 25, num: '551', price: '8' },
+					{ name: '未实名10-12级【6-12月】----10.00 usdt', index: 26, num: '351', price: '10' },
+					{ name: '私人直登未实名20-29（8-9年)活跃----12.00 usdt', index: 27, num: '356', price: '12' },
+					{ name: '实名15-20级【6-12月】----17.00 usdt', index: 28, num: '322', price: '17' },
+					{ name: '实名20-29级【6-12月】----20.00 usdt', index: 29, num: '235', price: '20' },
+					{ name: '私人直登实名15-19级(8-9年)活跃----23.00 usdt', index: 30, num: '220', price: '23' },
+					{ name: '实名30-35级【1-5年】----25.00 usdt', index: 31, num: '68', price: '25' },
+				]
+				const data_7 = [
+					{ name: '探探白号----1.30 usdt', index: 323, num: '551', price: '1.3' },
+					{ name: '满月实名号----8.00 usdt', index: 334, num: '351', price: '8' },
+					{ name: '半年实名号----13.00 usdt', index: 345, num: '245', price: '13' },
+					{ name: '一年实名号----20.00 usdt', index: 356, num: '322', price: '20' },
+					{ name: '两年实名号----26.00 usdt', index: 367, num: '31', price: '26' },
+				]
+				const data_8 = [
+					{ name: '快手  白号----0.60 usdt', index: 377, num: '551', price: '0.6' },
+					{ name: '快手满月实名号----7.60 usdt', index: 388, num: '351', price: '7.6' },
+					{ name: '快手半年实名号----11.80 usdt', index: 399, num: '693', price: '11.8' },
+					{ name: '快手一年实名号----13.80 usdt', index: 400, num: '322', price: '13.8' },
+					{ name: '快手私人千粉号【真实粉丝】----18.80 usdt', index: 411, num: '235', price: '18.8' },
+				]
+				const data_9 = [
+					{ name: '抖音白号。【新注册3-7天】----2.00 usdt', index: 422, num: '551', price: '2' },
+					{ name: '满月实名号----9.00 usdt', index: 433, num: '561', price: '9' },
+					{ name: '半年实名号----13.00 usdt', index: 444, num: '114', price: '13' },
+					{ name: '一年实名号----18.00 usdt', index: 455, num: '322', price: '18' },
+					{ name: '千粉私人号----28.00 usdt', index: 466, num: '351', price: '28' },
+					{ name: '万粉私人号----60.00 usdt', index: 478, num: '220', price: '60' },
+					{ name: '抖音苹果ID登录【佐罗实名号】----13.00 usdt', index: 489, num: '68', price: '13' },
+					{ name: '抖音TOKEN号，CK号【满月】----8.00 usdt', index: 490, num: '268', price: '8' },
+				]
+				const data_10 = [
+					{ name: '世纪佳缘白号----2.00 usdt', index: 500, num: '551', price: '2' },
+					{ name: '满月带会员----18.00 usdt', index: 510, num: '351', price: '18' },
+					{ name: '半年带会员----23.00 usdt', index: 520, num: '245', price: '23' },
+					{ name: '一年带会员----30.00 usdt', index: 533, num: '122', price: '30' },
+				]
+				const data_11 = [
+					{ name: '钉钉白号----0.40 usdt', index: 32, num: '241', price: '0.4' },
+					{ name: '满月双认证----14.00 usdt', index: 33, num: '244', price: '14' },
+					{ name: '半年双认证----18.00 usdt', index: 34, num: '217', price: '18' },
+					{ name: '一年双认证----24.00 usdt', index: 35, num: '267', price: '24' },
+				]
+				const data_12 = [
+					{ name: '京东账号新号----2.00 usdt', index: 36, num: '554', price: '2' },
+					{ name: '京东账号老号----18.00 usdt', index: 37, num: '938', price: '18' },
+					{ name: '京东账号实名带支付密码----18.00 usdt', index: 38, num: '794', price: '18' },
+				]
+				const data_13 = [
+					{ name: '微信公众号：现货(名称随机) 现货（名字：XX网络XX科技XX信息XX商贸）----32.00 usdt', index: 39, num: '348', price: '32' },
+					{ name: '微信公众号：定制(指定名称) 定制（提供指定名称包认证通过 被占用除外）----42.00 usdt', index: 40, num: '920', price: '42' },
+				]
+				const data_14 = [
+					{ name: '公司绿主体号----65.00 usdt', index: 41, num: '841', price: '65' },
+					{ name: '个体绿主体号----45.00 usdt', index: 42, num: '462', price: '45' },
+					{ name: '白标主体号----26.00 usdt', index: 43, num: '416', price: '26' },
+					{ name: '2021年公司绿标----70.00 usdt', index: 44, num: '842', price: '70' },
+					{ name: '2020年公司绿标----80.00 usdt', index: 45, num: '843', price: '80' },
+					{ name: '2019年公司绿标----105.00 usdt', index: 46, num: '777', price: '15' },
+					{ name: '企业微信主体红标：当天----9.50 usdt', index: 47, num: '693', price: '9.5' },
+					{ name: '企业微信主体红标：满月----13.00 usdt', index: 48, num: '650', price: '13' },
+					{ name: '企业微信主体红标：2-10月----15.00 usdt', index: 49, num: '277', price: '15' },
+					{ name: '企业微信主体红标：20年----35.00 usdt', index: 50, num: '893', price: '35' },
+					{ name: '企业微信主体白标：新白----15.00 usdt', index: 51, num: '762', price: '15' },
+					{ name: '企业微信主体白标：20年----55.00 usdt', index: 52, num: '687', price: '55' },
+					{ name: '当天团队号----16.00 usdt', index: 53, num: '359', price: '16' },
+					{ name: '红白绿客服号----20.00 usdt', index: 54, num: '720', price: '20' },
+					{ name: '国内万人绿子号----45.00 usdt', index: 55, num: '851', price: '45' },
+				]
+				const data_15 = [
+					{ name: '闲鱼白号【未实名】----1.00 usdt', index: 56, num: '696', price: '1' },
+					{ name: '闲鱼白号【已实名】----13.00 usdt', index: 57, num: '843', price: '13' },
+					{ name: '闲鱼白号【未实名】1-8年老号----10.00 usdt', index: 58, num: '402', price: '10' },
+					{ name: '闲鱼白号【已实名】1-8年老号----26.00 usdt', index: 59, num: '667', price: '26' },
+				]
+				const data_16 = [
+					{ name: '中国境内卡租用【一天】----1.00 usdt', index: 60, num: '516', price: '1' },
+					{ name: '中国境内卡租用【七天】----2.00 usdt', index: 61, num: '958', price: '2' },
+					{ name: '中国境内卡租用【一个月】----3.00 usdt', index: 62, num: '646', price: '3' },
+					{ name: '香港卡租用【一天】----0.30 usdt', index: 63, num: '794', price: '0.3' },
+					{ name: '香港卡租用【七天】----1.00 usdt', index: 64, num: '315', price: '1' },
+					{ name: '香港卡租用【一个月】----1.60 usdt', index: 65, num: '483', price: '1.6' },
+					{ name: '美国卡租用【一天】----0.50 usdt', index: 66, num: '560', price: '0.5' },
+					{ name: '美国卡租用【七天】----0.90 usdt', index: 67, num: '756', price: '0.9' },
+					{ name: '美国卡租用【一个月】----1.50 usdt', index: 68, num: '737', price: '1.5' },
+					{ name: '流量卡【邮寄】----10.00 usdt', index: 69, num: '967', price: '10' },
+					{ name: '三网实名手机卡【买断邮寄】下单后需发邮寄地址给客服----45.00 usdt', index: 70, num: '457', price: '45' },
+				]
+				const data_17 = [
+					{ name: '直登V2老龄支付宝【永久使用永不找回】----20.00 usdt', index: 71, num: '336', price: '20' },
+					{ name: '直登V3老龄支付宝【永久使用永不找回】----23.00 usdt', index: 72, num: '713', price: '23' },
+					{ name: '直登V2老龄私人支付宝【永久使用永不找回】----20.00 usdt', index: 73, num: '409', price: '20' },
+					{ name: '直登V3老龄私人支付宝【永久使用永不找回】----22.00 usdt', index: 74, num: '204', price: '22' },
+					{ name: '企业支付宝主号 ----85.00 usdt', index: 75, num: '956', price: '85' },
+					{ name: '企业支付宝子号----45.00 usdt', index: 76, num: '883', price: '45' },
+				]
+				const data_18 = [
+					{ name: 'QQ邮箱----0.03 usdt', index: 77, num: '461', price: '0.3' },
+					{ name: 'QQ号出售【星星直登】（不可解封） ----3.00 usdt', index: 78, num: '908', price: '3' },
+					{ name: 'QQ号出售【月亮直登】（不可解封） ----5.00 usdt', index: 79, num: '718', price: '5' },
+					{ name: 'QQ号出售【单太直登】 （不可解封）----10.00 usdt', index: 80, num: '207', price: '10' },
+					{ name: '纯私人单太QQ直登可改绑----26.00 usdt', index: 81, num: '635', price: '26' },
+					{ name: '纯私人双太QQ直登可改绑----30.00 usdt', index: 82, num: '272', price: '30' },
+					{ name: '纯私人三太QQ直登可改绑----35.00 usdt', index: 83, num: '398', price: '35' },
+					{ name: 'QQ靓号----5.00 usdt', index: 84, num: '784', price: '5' },
+					{ name: '纯私人9位皇冠QQ直登可改绑----65.00 usdt', index: 85, num: '365', price: '65' },
+				]
+				const data_19 = [
+					{ name: '8-15天手工精养实名绑卡带支付----18.00 usdt', index: 86, num: '595', price: '18' },
+					{ name: '满月手工精养实名绑卡带支付----23.00 usdt', index: 87, num: '783', price: '23' },
+					{ name: '私人3月号带实名带账单带圈带支付----26.00 usdt', index: 88, num: '341', price: '26' },
+					{ name: '私人半年号带实名带账单带圈带支付----35.00 usdt', index: 89, num: '614', price: '35' },
+					{ name: '私人一年号带实名带账单带圈带支付----40.00 usdt', index: 90, num: '715', price: '40' },
+					{ name: '私人两年号带实名带账单带圈带支付----45.00 usdt', index: 91, num: '869', price: '45' },
+					{ name: '私人三年号带实名带账单带圈带支付----50.00 usdt', index: 92, num: '747', price: '50' },
+					{ name: '私人四年号带实名带账单带圈带支付----55.00 usdt', index: 93, num: '924', price: '55' },
+				]
+				const data_20 = [
+					{ name: '美国苹果ID账号带密保（五年以上）----2.00 usdt', index: 94, num: '516', price: '2' },
+					{ name: '小火箭id购买----2.00 usdt', index: 95, num: '873', price: '2' },
+					{ name: '国外id共享----0.30 usdt', index: 96, num: '630', price: '0.3' },
+					{ name: '小火箭id【共享】----0.60 usdt', index: 97, num: '759', price: '0.6' },
+					{ name: '美国苹果ID购买独享【带密保】----2.50 usdt', index: 98, num: '878', price: '2.5' },
+					{ name: '德国苹果ID购买独享【带密保】----2.50 usdt', index: 99, num: '203', price: '2.5' },
+					{ name: '中国苹果ID购买独享【带密保】----2.50 usdt', index: 100, num: '976', price: '2.5' },
+				]
+				const data_21 = [
+					{ name: '知乎账号【新号】----0.40 usdt', index: 101, num: '944', price: '0.4' },
+					{ name: '知乎盐值350分----1.30 usdt', index: 102, num: '700', price: '1.3' },
+				]
+				const data_22 = [
+					{ name: '淘宝卖家账号1心店铺----13.00 usdt', index: 103, num: '517', price: '13' },
+					{ name: '淘宝卖家账号3心店铺----15.00 usdt', index: 104, num: '630', price: '15' },
+					{ name: '淘宝卖家账号1钻石店铺----30.00 usdt', index: 105, num: '864', price: '30' },
+					{ name: '淘宝买家号3钻----25.00 usdt', index: 106, num: '668', price: '25' },
+					{ name: '淘宝买家号5钻----35.00 usdt', index: 107, num: '354', price: '35' },
+					{ name: '淘宝买家号88VIP----15.00 usdt', index: 108, num: '703', price: '15' },
+				]
+				const data_23 = [
+					{ name: '拼多多买家号----6.0 usdt', index: 109, num: '977', price: '6' },
+					{ name: '拼多多实名老号----20.00 usdt', index: 110, num: '509', price: '20' },
+				]
+				const data_24 = [{ name: 'No data', index: 111, num: '0', price: '0' }]
+				const data_25 = [{ name: 'No data', index: 112, num: '0', price: '0' }]
+				const data_26 = [{ name: 'No data', index: 113, num: '0', price: '0' }]
+				const data_27 = [{ name: 'No data', index: 114, num: '0', price: '0' }]
+				const data_28 = [{ name: 'No data', index: 115, num: '0', price: '0' }]
+				const data_29 = [
+					{ name: '蝙蝠账号新号----0.30 usdt', index: 111, num: '437', price: '0.3' },
+					{ name: '蝙蝠账号一年以上老号----13.00 usdt', index: 112, num: '714', price: '13' },
+				]
+				const data_30 = [
+					{ name: '伊对白号----1.00 usdt', index: 113, num: '648', price: '1' },
+					{ name: '伊对实名号【7-15天】----12.00 usdt', index: 114, num: '427', price: '12' },
+					{ name: '伊对实名号【满月号】----15.00 usdt', index: 115, num: '844', price: '15' },
+					{ name: '伊对实名号【3-6个月号】----25.00 usdt', index: 116, num: '695', price: '25' },
+				]
+				const data_31 = [
+					{ name: '头条新号----3.00 usdt', index: 117, num: '624', price: '3' },
+					{ name: '今日头条【半年号】----5.50 usdt', index: 118, num: '755', price: '5.5' },
+				]
+				const data_32 = [
+					{ name: '58同城新号----7.00 usdt', index: 119, num: '725', price: '7' },
+					{ name: '58同城实名认证----13.00 usdt', index: 120, num: '632', price: '13' },
+				]
+				const data_33 = [
+					{ name: 'B站 4级号----3.50 usdt', index: 121, num: '903', price: '3.5' },
+					{ name: 'B站5级号----5.50 usdt', index: 122, num: '444', price: '5.5' },
+					{ name: 'B站 6级号----12.00 usdt', index: 123, num: '829', price: '12' },
+				]
+				const data_34 = [
+					{ name: '未实名白号----3.50 usdt', index: 124, num: '759', price: '3.5' },
+					{ name: '已实名满月号----8.50 usdt', index: 125, num: '983', price: '8.5' },
+					{ name: '转转已实名 半年号----10.00 usdt', index: 126, num: '390', price: '10' },
+				]
+
+				//const data_*   ·············上面的下拉框有几个选项，下面就放几个，对应的index不要重复
+
+				//监听第一个
+				form.on('select(filter)', function (params) {
+					console.log('params :>> ', params.value)
+
+					$('#filterr').empty() //清空 下拉框 商品名称
+
+					if (params.value == 9001) {
+						//等于9001 对应的商品数据就是data_1
+						$.each(data_1, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+						$('#el-id-4669-13').attr('value', data_1[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_1[0].price) //商品单价
+					} else if (params.value == 9002) {
+						//等于9002 对应的商品数据就是data_2
+						$.each(data_2, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+						$('#el-id-4669-13').attr('value', data_2[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_2[0].price) //商品单价
+					} else if (params.value == 9003) {
+						//等于9003 对应的商品数据就是data_3
+						$.each(data_3, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_3[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_3[0].price) //商品单价
+					} else if (params.value == 9004) {
+						//等于9003 对应的商品数据就是data_3
+						$.each(data_4, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_4[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_4[0].price) //商品单价
+					} else if (params.value == 9005) {
+						//等于9003 对应的商品数据就是data_5
+						$.each(data_5, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_5[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_5[0].price) //商品单价
+					} else if (params.value == 9006) {
+						//等于9003 对应的商品数据就是data_6
+						$.each(data_6, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_6[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_6[0].price) //商品单价
+					} else if (params.value == 9007) {
+						//等于9003 对应的商品数据就是data_7
+						$.each(data_7, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_7[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_7[0].price) //商品单价
+					} else if (params.value == 9008) {
+						//等于9003 对应的商品数据就是data_8
+						$.each(data_8, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_8[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_8[0].price) //商品单价
+					} else if (params.value == 9009) {
+						//等于9003 对应的商品数据就是data_9
+						$.each(data_9, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_9[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_9[0].price) //商品单价
+					} else if (params.value == 9010) {
+						//等于9003 对应的商品数据就是data_10
+						$.each(data_10, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_10[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_10[0].price) //商品单价
+					} else if (params.value == 9011) {
+						//等于9003 对应的商品数据就是data_11
+						$.each(data_11, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_11[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_11[0].price) //商品单价
+					} else if (params.value == 9012) {
+						//等于9003 对应的商品数据就是data_12
+						$.each(data_12, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_12[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_12[0].price) //商品单价
+					} else if (params.value == 9013) {
+						//等于9003 对应的商品数据就是data_13
+						$.each(data_13, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_13[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_13[0].price) //商品单价
+					} else if (params.value == 9014) {
+						//等于9003 对应的商品数据就是data_14
+						$.each(data_14, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_14[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_14[0].price) //商品单价
+					} else if (params.value == 9015) {
+						//等于9003 对应的商品数据就是data_15
+						$.each(data_15, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_15[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_15[0].price) //商品单价
+					} else if (params.value == 9016) {
+						//等于9003 对应的商品数据就是data_16
+						$.each(data_16, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_16[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_16[0].price) //商品单价
+					} else if (params.value == 9017) {
+						//等于9003 对应的商品数据就是data_17
+						$.each(data_17, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_17[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_17[0].price) //商品单价
+					} else if (params.value == 9018) {
+						//等于9003 对应的商品数据就是data_18
+						$.each(data_18, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_18[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_18[0].price) //商品单价
+					} else if (params.value == 9019) {
+						//等于9003 对应的商品数据就是data_19
+						$.each(data_19, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_19[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_19[0].price) //商品单价
+					} else if (params.value == 9020) {
+						//等于9003 对应的商品数据就是data_20
+						$.each(data_20, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_20[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_20[0].price) //商品单价
+					} else if (params.value == 9021) {
+						//等于9003 对应的商品数据就是data_21
+						$.each(data_21, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_21[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_21[0].price) //商品单价
+					} else if (params.value == 9022) {
+						//等于9003 对应的商品数据就是data_22
+						$.each(data_22, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_22[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_22[0].price) //商品单价
+					} else if (params.value == 9023) {
+						//等于9003 对应的商品数据就是data_23
+						$.each(data_23, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_23[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_23[0].price) //商品单价
+					} else if (params.value == 9024) {
+						//等于9003 对应的商品数据就是data_24
+						$.each(data_24, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_24[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_24[0].price) //商品单价
+					} else if (params.value == 9025) {
+						//等于9003 对应的商品数据就是data_25
+						$.each(data_25, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_25[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_25[0].price) //商品单价
+					} else if (params.value == 9026) {
+						//等于9003 对应的商品数据就是data_26
+						$.each(data_26, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_26[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_26[0].price) //商品单价
+					} else if (params.value == 9027) {
+						//等于9003 对应的商品数据就是data_27
+						$.each(data_27, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_27[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_27[0].price) //商品单价
+					} else if (params.value == 9028) {
+						//等于9003 对应的商品数据就是data_28
+						$.each(data_28, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_28[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_28[0].price) //商品单价
+					} else if (params.value == 9029) {
+						//等于9003 对应的商品数据就是data_29
+						$.each(data_29, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_29[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_29[0].price) //商品单价
+					} else if (params.value == 9030) {
+						//等于9003 对应的商品数据就是data_30
+						$.each(data_30, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_30[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_30[0].price) //商品单价
+					} else if (params.value == 9031) {
+						//等于9003 对应的商品数据就是data_31
+						$.each(data_31, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_31[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_31[0].price) //商品单价
+					} else if (params.value == 9032) {
+						//等于9003 对应的商品数据就是data_32
+						$.each(data_32, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_32[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_32[0].price) //商品单价
+					} else if (params.value == 9033) {
+						//等于9003 对应的商品数据就是data_33
+						$.each(data_33, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_33[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_33[0].price) //商品单价
+					} else if (params.value == 9034) {
+						//等于9003 对应的商品数据就是data_34
+						$.each(data_34, function (index, value) {
+							$('#filterr').append(new Option(value.name, value.index)) // 下拉菜单里添加元素
+						})
+
+						$('#el-id-4669-13').attr('value', data_34[0].num) //商品库存
+						$('#el-id-4669-12').attr('value', data_34[0].price) //商品单价
+					}
+
+					form.render('select') //加载完数据以后刷新表格
+				})
+
+				//监控第二个商品，根据不同的商品给出不同的价格
+				form.on('select(filterr)', function (params) {
+					//console.log(params.value)//这里的value 对应着data_* 里面的index 会筛选
+
+					//上面有几个data_*  下面复制介个  并且把$.each(data_*)按顺序改好
+					$.each(data_1, function (index, value) {
+						if (params.value == value.index) {
+							//console.log("选中",value.index,value)
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_2, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_3, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_4, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_5, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_6, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_7, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_8, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_9, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_10, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_11, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_12, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_13, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_14, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_15, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_16, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_17, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_18, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_19, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_20, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_21, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_22, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_23, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_24, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_25, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_26, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_27, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_28, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_29, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_30, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_31, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_32, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_33, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+					$.each(data_34, function (index, value) {
+						if (params.value == value.index) {
+							$('#el-id-4669-12').attr('value', value.price) //商品单价
+							$('#el-id-4669-13').attr('value', value.num) //商品库存
+							$('.el-alert__description').text('总金额 ' + value.price + '.00 USDT')
+						}
+					})
+				})
+			})
+
+			//件数-
+			function numd() {
+				var num = parseFloat($('#el-id-4669-14').attr('value'))
+				if (num < 2) {
+					alert('对不起，最少1件！')
+					return false
+				}
+				$('#el-id-4669-14').attr('value', (num - 1).toString())
+
+				var nnnn = $('#el-id-4669-12').attr('value') //商品单价
+				var oooo = parseFloat(nnnn) * (num - 1)
+				$('.el-alert__description').text('总金额 ' + oooo + '.00 USDT')
+			}
+			//件数+
+			function numn() {
+				var num = parseFloat($('#el-id-4669-14').attr('value'))
+				$('#el-id-4669-14').attr('value', (num + 1).toString())
+
+				//.el-alert__description
+
+				var nnnn = $('#el-id-4669-12').attr('value') //商品单价
+				var oooo = parseFloat(nnnn) * (num + 1)
+				$('.el-alert__description').text('总金额 ' + oooo + '.00 USDT')
+			}
+			//监听Input 件数
+			$('#el-id-4669-14').on('input', function (e) {
+				var nnnn = $('#el-id-4669-12').attr('value') //商品单价
+				var oooo = parseFloat(nnnn) * e.delegateTarget.value
+				$('.el-alert__description').text('总金额 ' + oooo + '.00 USDT')
+			})
+			//<div class="el-form-item__error">请输入邮箱</div>
+			function sub() {
+				if ($('#el-id-4669-161').attr('value')) {
+					$('.el-form-item__error').attr('style', 'display:none')
+					if ($('#el-id-4669-161').attr('value')) {
+						$('#type_err').attr('style', 'display:none')
+						location.href = 'https://www.kk2291.com'
+					} else {
+						$('#type_err').attr('style', 'display:block')
+						return false
+					}
+				} else {
+					$('.el-form-item__error').attr('style', 'display:block')
+					return false
+				}
+			}
+			//监听Input 件数
+			$('#el-id-4669-161').on('input', function (e) {
+				//console.log(e.delegateTarget.value)
+				$('#el-id-4669-161').attr('value', e.delegateTarget.value)
+			})
+		</script>
+	</body>
+</html>
