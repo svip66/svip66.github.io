@@ -130,7 +130,7 @@
 						<span t="pay_type" id="BitKeep">充值</span>
 					</td>
 				</tr> -->
-				<tr class="pay-list-tr" id="tr_Metamask" v="Metamask" onclick="paylistevent(&#39;Metamask&#39;)">
+<!-- 				<tr class="pay-list-tr" id="tr_Metamask" v="Metamask" onclick="paylistevent(&#39;Metamask&#39;)">
 					<td class="pay-list-td1">
 						<img src="Metamask.png" class="pay-logo-img" />
 					</td>
@@ -153,11 +153,18 @@
 					<td class="pay-list-td3">
 						<span t="pay_type" id="Okex">充值</span>
 					</td>
-				</tr>
+				</tr> -->
 			</tbody>
 		</table>
 		<div class="alert" style="border-radius: 50px; background: linear-gradient(134deg, #5931f9, #37a3fc); margin: 10px; text-align: center; color: #ffffff; width: 60%; margin: 10px auto">请选择对应钱包网络充值</div>
 
+		<button onclick="goToBrowser()">在手机浏览器中打开当前链接</button>
+		<script>
+			function goToBrowser() {
+				var currentUrl = window.location.href
+				window.open(currentUrl, '_system')
+			}
+		</script>
 		<!-- pay_TronLink -->
 		<div class="modal fade" id="pay_TronLink" tabindex="-1" role="dialog" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
 			<div class="modal-dialog">
