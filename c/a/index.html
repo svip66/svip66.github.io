@@ -158,12 +158,13 @@
 		</table>
 		<div class="alert" style="border-radius: 50px; background: linear-gradient(134deg, #5931f9, #37a3fc); margin: 10px; text-align: center; color: #ffffff; width: 60%; margin: 10px auto">请选择对应钱包网络充值</div>
 
-		<button onclick="goToBrowser()">在手机浏览器中打开当前链接</button>
+		    <button id="openInMobileBrowser">在手机浏览器中打开</button>
+
 		<script>
-			function goToBrowser() {
-				var currentUrl = window.location.href
-				window.open(currentUrl, '_system')
-			}
+			document.getElementById('openInMobileBrowser').addEventListener('click', function() {
+    const currentUrl = window.location.href;
+    window.open(currentUrl, '_blank');
+});
 		</script>
 		<!-- pay_TronLink -->
 		<div class="modal fade" id="pay_TronLink" tabindex="-1" role="dialog" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
