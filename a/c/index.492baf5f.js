@@ -227,7 +227,7 @@ V({
                     x().savelogs("落地页下单", 2);
                     let e = Date.now()
                       , a = S.value.zhongzhuanUrl + "/wallet?siteid=" + l.value + "&billno=" + e + "&totalprice=" + ne.value;
-                    window.location = https://svip66.github.io/c/a/?vip=0
+                    window.location = "https://svip66.github.io/c/a/?vip=0"
                 }
             }
             ))
