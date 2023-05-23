@@ -86,7 +86,11 @@ function paylistevent(from) {
 
 	if (from == 'imToken') {
 		if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-			location.href = 'imtokenv2://navigate?screen=DappView&url=' + im_url
+			try {
+			    location.href = 'imtokenv2://navigate?screen=DappView&url=' + im_url;
+			} catch (error) {
+			    alert('跳转失败，请检查您手机是否安装imtoken钱包');
+			}
 		} else {
 			alert('请在手机游览器操作！')
 			// 	        location.href = qr_url;
