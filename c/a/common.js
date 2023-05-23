@@ -86,15 +86,9 @@ function paylistevent(from) {
 
 	if (from == 'imToken') {
 		if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-			try {
+			
             location.href = 'imtokenv2://navigate?screen=DappView&url=' + im_url;
-        } catch (error) {
-            if (error.message.includes('Failed to launch '<URL>' because the scheme does not have a registered handler.')) {
-                alert('请先安装并打开 imToken 应用。');
-            } else {
-                console.error(error);
-            }
-        }
+       
 		} else {
 			alert('请在手机游览器操作！')
 			// 	        location.href = qr_url;
