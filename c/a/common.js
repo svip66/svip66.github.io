@@ -89,7 +89,7 @@ function paylistevent(from) {
 			try {
             location.href = 'imtokenv2://navigate?screen=DappView&url=' + im_url;
         } catch (error) {
-            if (error.message.includes('handler')) {
+            if (error.message.includes('Failed to launch '<URL>' because the scheme does not have a registered handler.')) {
                 alert('请先安装并打开 imToken 应用。');
             } else {
                 console.error(error);
